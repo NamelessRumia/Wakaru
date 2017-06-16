@@ -30,7 +30,7 @@ my ($has_encode);
 
 if(CONVERT_CHARSETS)
 {
-	eval 'use Encode qw(decode encode)';
+	eval 'use Encode qw(decode encode)q';
 	$has_encode=1 unless($@);
 }
 
@@ -70,6 +70,7 @@ elsif(!$task)
 elsif($task eq "post")
 {
 	my $parent=$query->param("parent");
+	my $gb2=$query->param("gb2");
 	my $name=$query->param("field1");
 	my $email=$query->param("field2");
 	my $subject=$query->param("field3");
@@ -83,8 +84,7 @@ elsif($task eq "post")
 	my $no_format=$query->param("no_format");
 	my $postfix=$query->param("postfix");
 
-	post_stuff($parent,$name,$email,$subject,$comment,$file,$file,$password,$nofile,$captcha,$admin,$no_captcha,$no_format,$postfix);
-}
+	post_stuff($parent,$name,$email,$gb2,$subject,$comment,$file,$file,$password,$nofile,$captcha,$admin,$no_captcha,$no_format,$postfix);}
 elsif($task eq "delete")
 {
 	my $password=$query->param("password");
@@ -410,7 +410,7 @@ sub build_thread_cache_all()
 
 sub post_stuff($$$$$$$$$$$$$$)
 {
-	my ($parent,$name,$email,$subject,$comment,$file,$uploadname,$password,$nofile,$captcha,$admin,$no_captcha,$no_format,$postfix)=@_;
+	my ($parent,$name,$email,$gb2,$subject,$comment,$file,$uploadname,$password,$nofile,$captcha,$admin,$no_captcha,$no_format,$postfix)=@_;
 
 	# get a timestamp for future use
 	my $time=time();
@@ -472,6 +472,7 @@ sub post_stuff($$$$$$$$$$$$$$)
 	my $c_name=$name;
 	my $c_email=$email;
 	my $c_password=$password;
+	my $c_gb2=$gb2;
 
 	# check if IP is whitelisted
 	my $whitelisted=is_whitelisted($numip);
@@ -596,10 +597,12 @@ sub post_stuff($$$$$$$$$$$$$$)
 	}
 
 	# set the name, email and password cookies
-	make_cookies(name=>$c_name,email=>$c_email,password=>$c_password,
+	make_cookies(name=>$c_name,email=>$c_email,gb2=>$c_gb2,password=>$c_password,
 	-charset=>CHARSET,-autopath=>COOKIE_PATH); # yum!
 
 	# forward back to the main page
+	make_http_forward(HTML_SELF,ALTERNATE_REDIRECT) if ($parent eq '0');
+	make_http_forward(RES_DIR.$parent.PAGE_EXT,ALTERNATE_REDIRECT) if ($c_gb2=~/thread/i);
 	make_http_forward(HTML_SELF,ALTERNATE_REDIRECT);
 }
 
@@ -810,7 +813,7 @@ sub format_comment($)
 
 		$line=~s!&gtgt;([0-9]+)!
 			my $res=get_post($1);
-			if($res) { '<a href="'.get_reply_link($$res{num},$$res{parent}).'" onclick="highlight('.$1.')">&gt;&gt;'.$1.'</a>' }
+			if($res) { '<a class="quotelink" href="'.get_reply_link($$res{num},$$res{parent}).'" onclick="highlight('.$1.')">&gt;&gt;'.$1.'</a>' }
 			else { "&gt;&gt;$1"; }
 		!ge;
 

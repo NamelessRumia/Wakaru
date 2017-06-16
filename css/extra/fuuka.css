@@ -1,9 +1,9 @@
 html {
-	background: #FFFFEE;
-	color: #800000;
+	background: #EEF8F0;
+	color: #002200;
 }
 a {
-	color: #0000EE;
+	color: #34345C;
 }
 a:hover {
 	color: #DD0000;
@@ -16,9 +16,12 @@ a:hover {
 .logo {
 	clear: both;
 	text-align: center;
-	font-size: 2em;
-	color: #800000;
+	font: bold 2em Verdana,Tahoma,sans-serif;
+	color: #002200;
 	width: 100%;
+}
+.logo img, .logo br { /* delete this rule to make the title image appear */
+	display: none;
 }
 .theader {
 	background: #E04000;
@@ -32,16 +35,17 @@ a:hover {
 	font-size: 0.7em;
 }
 .postblock {
-	background: #EEAA88;
-	color: #800000;
+	background: #98C1A9;
+	color: #000000;
 	font-weight: bold;
 }
 .footer {
 	text-align: center;
 	font-size: 12px;
+	font-family: serif;
 }
 .passvalid {
-	background: #EEAA88;
+	background: #6A836F;
 	color: #FFFFFF;
 	text-align: center;
 	padding: 0px;
@@ -55,8 +59,8 @@ a:hover {
 	padding-bottom: 4px;
 }
 .managehead {
-	background: #AAAA66;
-	color: #400000;
+	background: #6A836F;
+	color: #FFFFFF;
 	padding: 0px;
 }
 .postlists {
@@ -65,10 +69,10 @@ a:hover {
 	padding: 0px;
 }
 .row1 {
-	background: #EEEECC;
+	background: #D6F0DA;
 }
 .row2 {
-	background: #DDDDAA;
+	background: #FFFFFF;
 }
 .unkfunc {
 	background: inherit;
@@ -80,7 +84,7 @@ a:hover {
 .filetitle, .replytitle {
 	background: inherit;
 	font-size: 1.2em;
-	color: #CC1105;
+	color: #0F0C5D;
 	font-weight: bold;
 }
 .postername, .commentpostername {
@@ -88,7 +92,7 @@ a:hover {
 	font-weight: bold;
 }
 .postertrip {
-	color: #228854;
+	color: #117743;
 }
 .oldpost {
 	color: #CC1105;
@@ -98,8 +102,8 @@ a:hover {
 	color: #707070;
 }
 .reply {
-	background: #F0E0D6;
-	color: #800000;
+	background: #D6F0DA;
+	color: #000000;
 }
 .doubledash {
 	vertical-align: top;
@@ -108,19 +112,11 @@ a:hover {
 }
 .thumbnailmsg {
 	font-size: small;
-	color: #800000;
+	color: #000000;
 }
 .highlight {
-	background: #F0E0D6;
-	border: 2px dashed #EEAA88;
+	background: #D6BAD0;
 }
 textarea[name="field4"] {
 	width: 380px;
-}
-.spoiler {
-	background: #F0D0B6;
-	color: #F0D0B6;
-}
-.spoiler:hover {
-	color: #800000;
 }

@@ -18,25 +18,25 @@ BEGIN {
 
 	eval "use constant USE_TEMPFILES => 1" unless(defined &USE_TEMPFILES);
 
-	eval "use constant TITLE => 'Wakaba image board'" unless(defined &TITLE);
+	eval "use constant TITLE => 'Wakaru image board'" unless(defined &TITLE);
 	eval "use constant SHOWTITLETXT => 1" unless(defined &SHOWTITLETXT);
 	eval "use constant SHOWTITLEIMG => 0" unless(defined &SHOWTITLEIMG);
 	eval "use constant TITLEIMG => 'title.jpg'" unless(defined &TITLEIMG);
-	eval "use constant FAVICON => 'wakaba.ico'" unless(defined &FAVICON);
+	eval "use constant FAVICON => 'wakaru.ico'" unless(defined &FAVICON);
 	eval "use constant HOME => '../'" unless(defined &HOME);
 	eval "use constant IMAGES_PER_PAGE => 10" unless(defined &IMAGES_PER_PAGE);
-	eval "use constant REPLIES_PER_THREAD => 10" unless(defined &REPLIES_PER_THREAD);
+	eval "use constant REPLIES_PER_THREAD => 5" unless(defined &REPLIES_PER_THREAD);
 	eval "use constant IMAGE_REPLIES_PER_THREAD => 0" unless(defined &IMAGE_REPLIES_PER_THREAD);
 	eval "use constant S_ANONAME => 'Anonymous'" unless(defined &S_ANONAME);
 	eval "use constant S_ANOTEXT => ''" unless(defined &S_ANOTEXT);
 	eval "use constant S_ANOTITLE => ''" unless(defined &S_ANOTITLE);
 	eval "use constant SILLY_ANONYMOUS => ''" unless(defined &SILLY_ANONYMOUS);
-	eval "use constant DEFAULT_STYLE => 'Futaba'" unless(defined &DEFAULT_STYLE);
+	eval "use constant DEFAULT_STYLE => 'Yotsuba B'" unless(defined &DEFAULT_STYLE);
 
 	eval "use constant MAX_KB => 1000" unless(defined &MAX_KB);
 	eval "use constant MAX_W => 200" unless(defined &MAX_W);
 	eval "use constant MAX_H => 200" unless(defined &MAX_H);
-	eval "use constant MAX_RES => 20" unless(defined &MAX_RES);
+	eval "use constant MAX_RES => 250" unless(defined &MAX_RES);
 	eval "use constant MAX_POSTS => 500" unless(defined &MAX_POSTS);
 	eval "use constant MAX_THREADS => 0" unless(defined &MAX_THREADS);
 	eval "use constant MAX_AGE => 0" unless(defined &MAX_AGE);
@@ -106,7 +106,7 @@ BEGIN {
 	eval "use constant RES_DIR => 'res/'" unless(defined &RES_DIR);
 	eval "use constant ARCHIVE_DIR => 'arch/'" unless (defined &ARCHIVE_DIR);
 	eval "use constant REDIR_DIR => 'redir/'" unless (defined &REDIR_DIR);
-	eval "use constant HTML_SELF => 'wakaba.html'" unless(defined &HTML_SELF);
+	eval "use constant HTML_SELF => 'index.html'" unless(defined &HTML_SELF);
 	eval "use constant JS_FILE => 'wakaba3.js'" unless(defined &JS_FILE);
 	eval "use constant CSS_DIR => 'css/'" unless(defined &CSS_DIR);
 	eval "use constant PAGE_EXT => '.html'" unless(defined &PAGE_EXT);
@@ -121,7 +121,7 @@ BEGIN {
 
 	eval "use constant FILETYPES => ()" unless(defined &FILETYPES);
 
-	eval "use constant WAKABA_VERSION => '3.0.9'" unless(defined &WAKABA_VERSION);
+	eval "use constant WAKARU_VERSION => '3.1.0'" unless(defined &WAKARU_VERSION);
 }
 
 1;

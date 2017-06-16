@@ -1,20 +1,20 @@
 html {
-	background: #EEEEEE;
+	background: #EEF2FF url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUKJFjunj1HRMDAwNWzMiILsZIpDpcarDrx28GI17zUeUYiXITLrdg08PISKyfGfGYgT38cLkRm50Dbx9944KYdIUrbohNV0SoAwD1FwRwgMmDbgAAAABJRU5ErkJggg==') repeat-x 50% 0%;
 	color: #000000;
 }
 body, textarea[name="field4"] {
-	font-family: "Trebuchet MS", Trebuchet, serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
 a {
-	color: #FF6600;
+	color: #34345C;
 }
 a:hover {
-	color: #FF3300;
+	color: #DD0000;
 }
 hr {
 	border: none;
-	border-top: 1px solid #DDDDDD;
+	border-top: 1px solid #B7C5D9;
 }
 .aheader {
 	color: #8899AA;
@@ -30,31 +30,40 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
-	font-size: 32px;
+	font-family: Tahoma, sans-serif;
+	font-size: 28px;
 	font-weight: bold;
-	color: #FF6600;
+	color: #AF0A0F;
+	letter-spacing: -2px;
 }
-.theader, .passvalid {
-	background: #DDDDDD;
-	color: #2266AA;
+.theader {
+	background: #0010E0;
+	color: #FFFFFF;
 	font-weight: bold;
 	text-align: center;
-	border: 1px solid #CCCCCC;
 }
 .postarea {
 }
 .rules {
 	font-size: 10px;
 }
+form[id="postform"] table {
+	border-spacing: 1px;
+}
 .postblock {
-	/* background: #DDDDDD; */
-	/* border: 1px solid #CCCCCC; */
-	color: #002244;
+	background: #9988EE;
+	border: 1px solid #000000;
 	padding: 3px 5px;
 	font-weight: bold;
 }
 .footer {
 	font-size: 12px;
+	text-align: center;
+}
+.passvalid {
+	background: #9988EE;
+	color: #FFFFFF;
+	font-weight: bold;
 	text-align: center;
 }
 .dellist {
@@ -66,7 +75,7 @@ hr {
 	padding-bottom: 4px;
 }
 .managehead {
-	background: #DDDDDD;
+	background: #0F8FE1;
 	font-size: 14px;
 	padding: 0px;
 }
@@ -76,10 +85,10 @@ hr {
 	padding: 0px;
 }
 .row1 {
-	background: #DDDDDD;
+	background: #9AD2F6;
 }
 .row2 {
-	background: #CCCCCC;
+	background: #FFFFFF;
 }
 .unkfunc {
 	background: inherit;
@@ -94,11 +103,11 @@ hr {
 	font-weight: bold;
 }
 .postername, .commentpostername {
-	color: #004A99;
+	color: #117743;
 	font-weight: bold;
 }
 .postertrip {
-	color: #004A99; /* #FF3300 */
+	color: #117743;
 }
 .oldpost {
 	color: #CC1105;
@@ -108,36 +117,46 @@ hr {
 	color: #707070;
 }
 .reply {
-	background-color: #DDDDDD;
-	border: 1px solid #CCCCCC;
+	background-color: #D6DAF0;
+	border: 1px solid #B7C5D9;
+	border-top: none; border-left: none;
 	padding: 2px;
 }
 .doubledash {
- 	display: none;
+	color: #B7C5D9;
+ 	vertical-align: top;
+	clear: both;
+	float: left;
 }
 .thumbnailmsg {
 	font-size: 10px;
 }
 .highlight {
-	background-color: #CCCCCC;
-	border: 1px solid #CCCCCC;
+	background-color: #D6BAD0;
+	border: 1px solid #BA9DBF;
+	border-top: none; border-left: none;
 	padding: 2px;
+}
+.quotelink {
+	color: #DD0000;
 }
 input[type="text"], input[type="password"], textarea {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #AAA;
+	outline: none;
 }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
-	border: 1px solid #EEAA88;
+	border: 1px solid #9988EE;
+	outline: none;
 }
 table[border="1"] {
-	background: #DDDDDD;
-	border: solid #CCCCCC;
-	border-width: 1px;
-	color: #333333;
+	background: #D6DAF0;
+	border: solid #B7C5D9;
+	border-width: 0 1px 1px 0;
+	color: #8899AA;
 	padding: 0 6px;
 }
 table[border="1"] a {

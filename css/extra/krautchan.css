@@ -1,12 +1,16 @@
 html {
-	background: #FFFFEE;
-	color: #800000;
+	background: #EEEEEE;
+	color: #000000;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
 }
 a {
-	color: #0000EE;
+	color: #222299;
 }
 a:hover {
-	color: #DD0000;
+	color: #992222;
 }
 .adminbar {
 	text-align: right;
@@ -16,38 +20,39 @@ a:hover {
 .logo {
 	clear: both;
 	text-align: center;
-	font-size: 2em;
-	color: #800000;
-	width: 100%;
+	font-family: sans-serif;
+	font-size: 26px;
+	font-weight: bold;
 }
 .theader {
-	background: #E04000;
+	background: #313370;
 	color: #FFFFFF;
+	font-weight: bold;
 	text-align: center;
-	padding: 0px;
 }
 .postarea {
 }
 .rules {
-	font-size: 0.7em;
+	/*! font-size: 10px; */
 }
 .postblock {
-	background: #EEAA88;
-	color: #800000;
+	background: #313370;
+	color: #FFFFFF;
+	padding: 3px 5px;
 	font-weight: bold;
 }
 .footer {
-	text-align: center;
 	font-size: 12px;
+	text-align: center;
 }
 .passvalid {
-	background: #EEAA88;
+	background: #313370;
 	color: #FFFFFF;
+	font-weight: bold;
 	text-align: center;
-	padding: 0px;
 }
 .dellist {
-	font-weight: bold;
+	font-weight:  bold;
 	text-align: center;
 }
 .delbuttons {
@@ -55,8 +60,9 @@ a:hover {
 	padding-bottom: 4px;
 }
 .managehead {
-	background: #AAAA66;
-	color: #400000;
+	background: #313370;
+	color: #FFFFFF;
+	font-size: 14px;
 	padding: 0px;
 }
 .postlists {
@@ -65,30 +71,30 @@ a:hover {
 	padding: 0px;
 }
 .row1 {
-	background: #EEEECC;
+	background: #AAAACC;
 }
 .row2 {
-	background: #DDDDAA;
+	background: #FFFFFF;
 }
 .unkfunc {
 	background: inherit;
-	color: #789922;
+	color: #007777;
 }
 .filesize {
 	text-decoration: none;
 }
 .filetitle, .replytitle {
 	background: inherit;
-	font-size: 1.2em;
-	color: #CC1105;
+	color: #CC3333;
 	font-weight: bold;
+	font-size: large;
 }
 .postername, .commentpostername {
-	color: #117743;
+	color: #3333CC;
 	font-weight: bold;
 }
 .postertrip {
-	color: #228854;
+	color: #3333CC;
 }
 .oldpost {
 	color: #CC1105;
@@ -98,29 +104,21 @@ a:hover {
 	color: #707070;
 }
 .reply {
-	background: #F0E0D6;
-	color: #800000;
+	background-color: #AAAACC;
 }
 .doubledash {
-	vertical-align: top;
+ 	vertical-align: top;
 	clear: both;
 	float: left;
 }
 .thumbnailmsg {
-	font-size: small;
-	color: #800000;
+	font-size: 10px;
 }
 .highlight {
-	background: #F0E0D6;
-	border: 2px dashed #EEAA88;
+	background-color: #AAAACC;
+	border: 2px dashed #444488;
 }
-textarea[name="field4"] {
-	width: 380px;
-}
-.spoiler {
-	background: #F0D0B6;
-	color: #F0D0B6;
-}
-.spoiler:hover {
-	color: #800000;
+.reflink a:hover {
+	color: #000000;
+	font-weight: bold;
 }

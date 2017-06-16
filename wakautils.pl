@@ -250,6 +250,9 @@ sub do_spans($@)
 		# do <em>
 		$line=~s{ (?<![0-9a-zA-Z\*_\x80-\x9f\xe0-\xfc]) (\*|_) (?![<>\s\*_]) ([^<>]+?) (?<![<>\s\*_\x80-\x9f\xe0-\xfc]) \1 (?![0-9a-zA-Z\*_]) }{<em>$2</em>}gx;
 
+		# do <span class="spoiler">
+		$line=~s{ (?<![0-9a-zA-Z\*_\x80-\x9f\xe0-\xfc]) (%%) (?![<>\s\*_]) ([^<>]+?) (?<![<>\s\*_\x80-\x9f\xe0-\xfc]) \1 (?![0-9a-zA-Z\*_]) }{<span class="spoiler">$2</span>}gx;
+
 		# do ^H
 		if($]>5.007)
 		{
@@ -806,6 +809,20 @@ sub make_date($$;@)
 
 		return sprintf("%04d-%02d-%02d %02d:%02d",
 		1993,9,int ($time-$sep93)/86400+1,$ltime[2],$ltime[1]);
+	}
+	elsif($style eq "mdy")
+	{
+		my @ltime=localtime($time);
+
+		return sprintf("%02d/%02d/%02d(%s)%02d:%02d",
+		$ltime[4]+1,$ltime[3],$ltime[5]-100,$locdays[$ltime[6]],$ltime[2],$ltime[1]);
+	}
+	elsif($style eq "mdys")
+	{
+		my @ltime=localtime($time);
+
+		return sprintf("%02d/%02d/%02d(%s)%02d:%02d:%02d",
+		$ltime[4]+1,$ltime[3],$ltime[5]-100,$locdays[$ltime[6]],$ltime[2],$ltime[1],$ltime[0]);
 	}
 }
 

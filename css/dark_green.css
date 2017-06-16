@@ -1,23 +1,24 @@
 html {
-	background: #EEEEEE;
-	color: #000000;
+	background: #1E1E1E;
+	color: #999999;
 }
 body, textarea[name="field4"] {
-	font-family: "Trebuchet MS", Trebuchet, serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
 a {
-	color: #FF6600;
+	color: #CCCCCC;
+	text-decoration: none;
 }
 a:hover {
-	color: #FF3300;
+	color: #FFFFFF;
 }
 hr {
 	border: none;
-	border-top: 1px solid #DDDDDD;
+	border-top: 1px solid #333333;
 }
 .aheader {
-	color: #8899AA;
+	color: #999999;
 }
 .adminbar {
 	text-align: right;
@@ -30,16 +31,17 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
-	font-size: 32px;
+	font-family: Arial, Helvetica, Tahoma, sans-serif;
+	font-size: 28px;
 	font-weight: bold;
-	color: #FF6600;
+	color: #32DD72;
+	letter-spacing: -2px;
 }
-.theader, .passvalid {
-	background: #DDDDDD;
-	color: #2266AA;
+.theader {
+	background: #32DD72;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
-	border: 1px solid #CCCCCC;
 }
 .postarea {
 }
@@ -47,14 +49,19 @@ hr {
 	font-size: 10px;
 }
 .postblock {
-	/* background: #DDDDDD; */
-	/* border: 1px solid #CCCCCC; */
-	color: #002244;
+	background: #333333;
+	color: #AAAAAA;
 	padding: 3px 5px;
 	font-weight: bold;
 }
 .footer {
 	font-size: 12px;
+	text-align: center;
+}
+.passvalid {
+	background: #32DD72;
+	color: #000000;
+	font-weight: bold;
 	text-align: center;
 }
 .dellist {
@@ -66,7 +73,8 @@ hr {
 	padding-bottom: 4px;
 }
 .managehead {
-	background: #DDDDDD;
+	background: #32DD72;
+	color: #000000;
 	font-size: 14px;
 	padding: 0px;
 }
@@ -76,29 +84,33 @@ hr {
 	padding: 0px;
 }
 .row1 {
-	background: #DDDDDD;
+	background: #333333;
 }
 .row2 {
-	background: #CCCCCC;
+	background: #555555;
 }
 .unkfunc {
 	background: inherit;
-	color: #789922;
+	color: #B8D962;
 }
 .filesize {
 	text-decoration: none;
 }
 .filetitle, .replytitle {
 	background: inherit;
-	color: #0F0C5D;
+	color: #446655;
 	font-weight: bold;
 }
 .postername, .commentpostername {
-	color: #004A99;
+	color: #32DD72;
 	font-weight: bold;
 }
 .postertrip {
-	color: #004A99; /* #FF3300 */
+	color: #AAAAAA;
+}
+.postername a, .commentpostername a, .postertrip a {
+	color: #32DDAF;
+	text-decoration: none;
 }
 .oldpost {
 	color: #CC1105;
@@ -108,36 +120,41 @@ hr {
 	color: #707070;
 }
 .reply {
-	background-color: #DDDDDD;
-	border: 1px solid #CCCCCC;
+	background-color: #333333;
+	border: 1px solid #555555;
 	padding: 2px;
 }
 .doubledash {
- 	display: none;
+	vertical-align: top;
+	clear: both;
+	float: left;
 }
 .thumbnailmsg {
 	font-size: 10px;
 }
 .highlight {
-	background-color: #CCCCCC;
-	border: 1px solid #CCCCCC;
+	background-color: #555555;
+	border: 1px solid #555555;
 	padding: 2px;
 }
 input[type="text"], input[type="password"], textarea {
+	background: #333333;
+	color: #CCCCCC;
+	border: 1px solid #666666;
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
-	border: 1px solid #AAA;
+	outline: none;
 }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
-	border: 1px solid #EEAA88;
+	border: 1px solid #AAAAAA;
+	outline: none;
 }
 table[border="1"] {
-	background: #DDDDDD;
-	border: solid #CCCCCC;
-	border-width: 1px;
-	color: #333333;
+	background-color: #333333;
+	border: 1px solid #555555;
+	color: #AAAAAA;
 	padding: 0 6px;
 }
 table[border="1"] a {
@@ -146,4 +163,24 @@ table[border="1"] a {
 table[border="1"] td {
 	border: none;
 	padding: 2px;
+}
+.reflink a:hover {
+	color: #32DD72 !important;
+	text-decoration: underline overline;
+}
+blockquote a:hover {
+	color: #32DD72;
+}
+input[type="submit"], input[type="reset"] {
+	background: #333333;
+	border: #888888 1px solid;
+	color: #CCCCCC;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+	background: #555555;
+	border: #888888 1px solid;
+	color: #32DD72;
+}
+.nothumb a {
+	color: #333333;
 }

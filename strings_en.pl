@@ -22,8 +22,8 @@ use constant S_NOTHUMB => 'No<br />thumbnail';								# Printed when there's no 
 use constant S_PICNAME => 'File: ';											# Prints text before upload name/link
 use constant S_REPLY => 'Reply';											# Prints text for reply link
 use constant S_OLD => 'Marked for deletion (old).';							# Prints text to be displayed before post is marked for deletion, see: retention
-use constant S_ABBR => '%d posts omitted. Click Reply to view.';			# Prints text to be shown when replies are hidden
-use constant S_ABBRIMG => '%d posts and %d images omitted. Click Reply to view.';						# Prints text to be shown when replies and images are hidden
+use constant S_ABBR => '%d post(s) omitted. Click Reply to view.';			# Prints text to be shown when replies are hidden
+use constant S_ABBRIMG => '%d post(s) and %d image(s) omitted. Click Reply to view.';						# Prints text to be shown when replies and images are hidden
 use constant S_ABBRTEXT => 'Comment too long. Click <a href="%s">here</a> to view the full text.';
 
 use constant S_REPDEL => 'Delete Post ';							# Prints text next to S_DELPICONLY (left)

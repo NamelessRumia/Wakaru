@@ -24,26 +24,26 @@
 #use constant USE_TEMPFILES => 1;				# Set this to 1 under Unix and 0 under Windows! (Use tempfiles when creating pages)
 
 # Page look
-#use constant TITLE => 'Wakaba image board';	# Name of this image board
+#use constant TITLE => 'Wakaru image board';	# Name of this image board
 #use constant SHOWTITLETXT => 1;				# Show TITLE at top (1: yes  0: no)
 #use constant SHOWTITLEIMG => 0;				# Show image at top (0: no, 1: single, 2: rotating)
 #use constant TITLEIMG => 'title.jpg';			# Title image (point to a script file if rotating)
-#use constant FAVICON => 'wakaba.ico';			# Favicon.ico file
+#use constant FAVICON => 'wakaru.ico';			# Favicon.ico file
 #use constant HOME => '../';					# Site home directory (up one level by default
 #use constant IMAGES_PER_PAGE => 10;			# Images per page
-#use constant REPLIES_PER_THREAD => 10;			# Replies shown
+#use constant REPLIES_PER_THREAD => 5;			# Replies shown
 #use constant IMAGE_REPLIES_PER_THREAD => 0;	# Number of image replies per thread to show, set to 0 for no limit.
 #use constant S_ANONAME => 'Anonymous';			# Defines what to print if there is no text entered in the name field
 #use constant S_ANOTEXT => '';					# Defines what to print if there is no text entered in the comment field
 #use constant S_ANOTITLE => '';					# Defines what to print if there is no text entered into subject field
 #use constant SILLY_ANONYMOUS => '';			# Make up silly names for anonymous people (0 or '': don't display, any combination of 'day' or 'board': make names change for each day or board, 'static': static names)
-#use constant DEFAULT_STYLE => 'Futaba';		# Title of the default style for the board.
+#use constant DEFAULT_STYLE => 'Yotsuba B';		# Title of the default style for the board.
 
 # Limitations
 #use constant MAX_KB => 1000;					# Maximum upload size in KB
 #use constant MAX_W => 200;						# Images exceeding this width will be thumbnailed
 #use constant MAX_H => 200;						# Images exceeding this height will be thumbnailed
-#use constant MAX_RES => 20;					# Maximum topic bumps
+#use constant MAX_RES => 250;					# Maximum topic bumps
 #use constant MAX_POSTS => 500;					# Maximum number of posts (set to 0 to disable)
 #use constant MAX_THREADS => 0;					# Maximum number of threads (set to 0 to disable)
 #use constant MAX_AGE => 0;						# Maximum age of a thread in hours (set to 0 to disable)
@@ -100,7 +100,7 @@
 #use constant CONVERT_CHARSETS => 1;			# Do character set conversions internally
 #use constant TRIM_METHOD => 0;					# Which threads to trim (0: oldest - like futaba 1: least active - furthest back)
 #use constant ARCHIVE_MODE => 0;				# Old images and posts are moved into an archive dir instead of deleted (0: no 1: yes). It is HIGHLY RECOMMENDED you use TRIM_METHOD => 1 with this, or you may end up with unreferenced pictures in your archive
-#use constant DATE_STYLE => 'futaba';			# Date style ('futaba', '2ch', 'localtime', 'tiny')
+#use constant DATE_STYLE => 'futaba';			# Date style ('futaba', '2ch', 'localtime', 'tiny', 'mdy')
 #use constant DISPLAY_ID => '';					# How to display user IDs (0 or '': don't display,
 												#  'day' and 'board' in any combination: make IDs change for each day or board,
 												#  'mask': display masked IP address (similar IPs look similar, but are still encrypted)
@@ -123,7 +123,7 @@
 #use constant RES_DIR => 'res/';				# Reply cache directory (needs to be writeable by the script)
 #use constant ARCHIVE_DIR => 'arch/';			# Root of archive directories (all need to be writeable by the script)
 #use constant REDIR_DIR => 'redir/';			# Redir directory, used for redirecting clients when load balancing
-#use constant HTML_SELF => 'wakaba.html';		# Name of main html file
+#use constant HTML_SELF => 'index.html';		# Name of main html file
 #use constant JS_FILE => 'wakaba.js';			# Location of the js file
 #use constant PAGE_EXT => '.html';				# Extension used for board pages after first
 #use constant ERRORLOG => '';					# Writes out all errors seen by user, mainly useful for debugging
@@ -164,7 +164,7 @@
 #	# Other files
 #	swf => 'icons/flash.png',
 #	torrent => 'icons/torrent.png',
-#	# To stop Wakaba from renaming image files, put their names in here like this:
+#	# To stop Wakaru from renaming image files, put their names in here like this:
 #	gif => '.',
 #	jpg => '.',
 #	png => '.',
