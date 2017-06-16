@@ -30,7 +30,7 @@ my ($has_encode);
 
 if(CONVERT_CHARSETS)
 {
-	eval 'use Encode qw(decode encode)q';
+	eval 'use Encode qw(decode encode)';
 	$has_encode=1 unless($@);
 }
 
