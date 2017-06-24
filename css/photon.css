@@ -147,3 +147,7 @@ table[border="1"] td {
 	border: none;
 	padding: 2px;
 }
+/* uncomment this if you want the incremental numbers like dvach/kharkach/sosach
+body.replypage { counter-reset:postcount; counter-increment:postcount; }
+body.replypage .reply .reflink:before {	counter-increment: postcount; content: "#" counter(postcount); color: #789922 !important; margin-left: 2px; margin-right: 2px; } 
+*/
