@@ -165,9 +165,9 @@ body::after{
 	bottom: 0px;
 	right: 180px !important;
 	opacity: 0.5;
-  z-index: -1;
+	z-index: -1;
 }
-/* uncomment this if you want the incremental numbers to the left of the post ids
+/* uncomment this if you want incremental numbers; margins need tweaking if font is changed to mona/ipamonagothic/etc.
 body.replypage { counter-reset:postcount; counter-increment:postcount; }
 body.replypage .filetitle:before { content: "1"; color: #000000 !important; font-weight: normal !important; margin-right: 2px; } 
 body.replypage .reply .replytitle:before { counter-increment: postcount; content: counter(postcount); color: #000000 !important; font-weight: normal !important; margin-left: 6px; margin-right: 2px; } 
