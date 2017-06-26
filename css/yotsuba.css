@@ -47,7 +47,7 @@ hr {
 .rules {
 	font-size: 10px;
 }
-form[id="postform"] table {
+.postarea table {
 	border-spacing: 1px;
 }
 .postblock {
