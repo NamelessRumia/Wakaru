@@ -20,8 +20,8 @@ a:hover {
 	color: #002200;
 	width: 100%;
 }
-.logo img, .logo br { /* delete this rule to make the title image appear */
-	display: none;
+.logo img, .logo br { /* uncomment this to make the title image disappear */
+	/* display: none; */
 }
 .theader {
 	background: #E04000;
