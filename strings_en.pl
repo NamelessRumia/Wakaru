@@ -19,8 +19,8 @@ use constant S_DELPASS => 'Password';								# Describes password field
 use constant S_DELEXPL => '(for post and file deletion)';			# Prints explanation for password box (to the right)
 use constant S_SPAMTRAP => 'Leave these fields empty (spam trap): ';
 
-use constant S_THUMB => 'Thumbnail displayed, click image for full size.';	# Prints instructions for viewing real source
-use constant S_HIDDEN => 'Thumbnail hidden, click filename for the full image.';	# Prints instructions for viewing hidden image reply
+use constant S_THUMB => 'Thumbnail displayed.';	# Prints instructions for viewing real source
+use constant S_HIDDEN => 'Thumbnail hidden.';	# Prints instructions for viewing hidden image reply
 use constant S_NOTHUMB => 'No<br />thumbnail';								# Printed when there's no thumbnail
 use constant S_PICNAME => 'File: ';											# Prints text before upload name/link
 use constant S_REPLY => 'Reply';											# Prints text for reply link
