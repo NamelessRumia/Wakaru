@@ -1,0 +1,124 @@
+html {
+	background: #E8E8FF;
+	color: #000000;
+}
+a {
+	color: #0010B0;
+	text-decoration: none;
+}
+a:hover {
+	color: #3355EE;
+}
+.adminbar {
+	text-align: right;
+	clear: both;
+	float: right;
+}
+.logo {
+	clear: both;
+	text-align: center;
+	font-size: 2em;
+	color: #000080;
+	width: 100%;
+}
+.theader {
+	background: #0010E0;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 0px;
+}
+.postarea {
+}
+.rules {
+	font-size: 0.7em;
+}
+.postblock {
+	background: #A8B8F0;
+	color: #000000;
+	font-weight: bold;
+}
+.footer {
+	text-align: center;
+	font-size: 12px;
+}
+.passvalid {
+	background: #9988EE;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 0px;
+}
+.dellist {
+	font-weight: bold;
+	text-align: center;
+}
+.delbuttons {
+	text-align: center;
+	padding-bottom: 4px;
+}
+.managehead {
+	background: #0F8FE1;
+	color: #400000;
+	padding: 0px;
+}
+.postlists {
+	background: #FFFFFF;
+	width: 100%;
+	padding: 0px;
+}
+.row1 {
+	background: #9AD2F6;
+}
+.row2 {
+	background: #FFFFFF;
+}
+.unkfunc {
+	background: inherit;
+	color: #4070C0;
+}
+.filesize {
+	text-decoration: none;
+}
+.filetitle, .replytitle {
+	background: inherit;
+	font-size: 1.2em;
+	color: #1010E0;
+	font-weight: bold;
+}
+.postername, .commentpostername {
+	color: #203090;
+	font-weight: bold;
+}
+.postertrip {
+	color: #4060b0;
+}
+.postername a, .commentpostername a, .postertrip a {
+	border-bottom: 1px dashed #6080e0;
+	text-decoration: none;
+}
+.oldpost {
+	color: #CC1105;
+	font-weight: bold;
+}
+.omittedposts, .abbrev {
+	color: #707070;
+}
+.reply {
+	background: #D6DAF0;
+	color: #000000;
+}
+.doubledash {
+	vertical-align: top;
+	clear: both;
+	float: left;
+}
+.thumbnailmsg {
+	font-size: small;
+	color: #000000;
+}
+.highlight {
+	background: #D6DAF0;
+	border: 2px dashed #9988EE;
+}
+textarea[name="field4"] {
+	width: 380px;
+}
