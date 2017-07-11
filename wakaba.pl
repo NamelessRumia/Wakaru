@@ -544,7 +544,7 @@ sub post_stuff($$$$$$$$$$$$$$)
 	# Manager and deletion stuff - duuuuuh?
 
 	# generate date
-	my $date=make_date($time,DATE_STYLE);
+	my $date=make_date($time+3*3600,DATE_STYLE);
 
 	# generate ID code if enabled
 	$date.=' ID:'.make_id_code($ip,$time,$email) if(DISPLAY_ID);
