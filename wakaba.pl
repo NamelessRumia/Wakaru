@@ -1114,6 +1114,7 @@ sub delete_stuff($$$$@)
 
 	# no password means delete always
 	$password="" if($admin); 
+	$archive = 0 unless($admin);
 
 	foreach $post (@posts)
 	{
