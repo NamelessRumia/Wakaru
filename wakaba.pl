@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perlml
 
 use CGI::Carp qw(fatalsToBrowser);
 
