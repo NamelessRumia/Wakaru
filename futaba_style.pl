@@ -85,10 +85,10 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 	<tr><td class="postblock"><const S_COMMENT></td><td><textarea name="field4" cols="48" rows="4"></textarea></td></tr>
 	<if $image_inp>
 		<tr><td class="postblock"><const S_UPLOADFILE></td><td><input type="file" name="file" size="35" />
-		<if $textonly_inp>[<label><input type="checkbox" name="nofile" value="on" /><const S_NOFILE> ]</label></if>
+		<if $textonly_inp><label>[<input type="checkbox" name="nofile" value="on" /><const S_NOFILE> ]</label></if>
 		</td></tr>
 	</if>
-	<tr><td class="postblock"><const S_BACKTO></td> <td><label><input name="gb2" value="board" type="radio" /> <const S_REBOARD></label> <label><input name="gb2" value="thread" checked="checked" type="radio" /> <const S_RETHREAD></label> </td></tr>
+	<tr><td class="postblock"><const S_BACKTO></td> <td><label>[<input name="gb2" value="board" type="radio" /> <const S_REBOARD> ]</label> <label>[<input name="gb2" value="thread" checked="checked" type="radio" /> <const S_RETHREAD> ]</label> </td></tr>
 	<if ENABLE_CAPTCHA>
 		<tr><td class="postblock"><const S_CAPTCHA></td><td><input type="text" name="captcha" size="10" />
 		<img alt="" src="<var expand_filename(CAPTCHA_SCRIPT)>?key=<var get_captcha_key($thread)>&amp;dummy=<var $dummy>" />
