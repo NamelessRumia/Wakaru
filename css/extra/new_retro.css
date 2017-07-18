@@ -2,7 +2,7 @@ html {
 	background: #F2F3F7;
 	color: #000000;
 }
-body, textarea[name="field4"] {
+body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
