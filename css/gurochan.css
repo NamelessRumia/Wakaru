@@ -2,7 +2,7 @@ html {
 	background: #EDDAD2;
 	color: #800000;
 }
-body, textarea[name="field4"] {
+body {
 	font-family: Tahoma, Verdana, sans-serif;
 	font-size: 10pt;
 }
