@@ -2,7 +2,7 @@ html {
 	background: #FFFFEE url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAXElEQVQokWP6d209EwMDAxJmZGJgZMAUQ+YzYhGD8Rlx6cGinii1jDjsxKKfHDXodhFlBgE9+ORR1GKazUi02YT8Q5x9JMsTHYYE1OBKRzjV4YsXdLtwpCvS0zYA7wsEfTvcT98AAAAASUVORK5CYII=') repeat-x 50% 0%;
 	color: #800000;
 }
-body, textarea[name="field4"] {
+body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 }
@@ -142,13 +142,13 @@ hr {
 	color: #000080;
 }
 input[type="text"], input[type="password"], textarea {
-	margin: -1px;
+	margin: 0px;
 	padding: 2px 4px 4px 4px;
 	border: 1px solid #AAA;
 	outline: none;
 }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
-	margin: -1px;
+	margin: 0px;
 	padding: 2px 4px 4px 4px;
 	border: 1px solid #EA8EA8;
 	outline: none;
