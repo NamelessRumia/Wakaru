@@ -2,7 +2,7 @@ html {
 	background: #EEEEEE;
 	color: #000000;
 }
-body, textarea[name="field4"] {
+body {
 	font-family: "Trebuchet MS", Trebuchet, serif;
 	font-size: 10pt;
 }
