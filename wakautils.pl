@@ -1,4 +1,4 @@
-# wakautils.pl v8.12
+# wakautils.pl v8.12b
 
 use strict;
 
@@ -253,6 +253,9 @@ sub do_spans($@)
 		# do <span class="spoiler">
 		$line=~s{ (?<![0-9a-zA-Z\*_\x80-\x9f\xe0-\xfc]) (%%) (?![<>\s\*_]) ([^<>]+?) (?<![<>\s\*_\x80-\x9f\xe0-\xfc]) \1 (?![0-9a-zA-Z\*_]) }{<span class="spoiler">$2</span>}gx;
 
+		# do <s>
+		# $line=~s{ (?<![0-9a-zA-Z\*_\x80-\x9f\xe0-\xfc]) (~~) (?![<>\s\*_]) ([^<>]+?) (?<![<>\s\*_\x80-\x9f\xe0-\xfc]) \1 (?![0-9a-zA-Z\*_]) }{<u>$2</u>}gx;
+
 		# do ^H
 		if($]>5.007)
 		{
@@ -260,7 +263,7 @@ sub do_spans($@)
 			$regexp=qr/(?:&#?[0-9a-zA-Z]+;|[^&<>])(?<!\^H)(??{$regexp})?\^H/;
 			$line=~s{($regexp)}{"<del>".(substr $1,0,(length $1)/3)."</del>"}gex;
 		}
-
+		
 		$line=$handler->($line) if($handler);
 
 		# fix up hidden sections
