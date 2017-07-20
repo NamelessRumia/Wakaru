@@ -30,9 +30,14 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
+	color: #FF6600;
+}
+.logoTitle {
 	font-size: 32px;
 	font-weight: bold;
-	color: #FF6600;
+}
+.logoSubtitle {
+	font-size: 11px;
 }
 .theader, .passvalid {
 	background: #DDDDDD;

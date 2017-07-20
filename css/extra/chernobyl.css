@@ -33,8 +33,14 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
+}
+.logoTitle {
 	font-size: 32px;
 	font-weight: bold;
+}
+.logoSubtitle {
+	font-size: 16px;
+	font-style: italic;
 }
 .theader, .passvalid {
 	background: #BBBBBB;

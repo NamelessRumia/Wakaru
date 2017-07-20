@@ -29,10 +29,12 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
+	color: #485269;
+}
+.logoTitle {
 	font-family: Tahoma, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
-	color: #485269;
 	letter-spacing: -2px;
 }
 .theader {

@@ -1,5 +1,5 @@
 html {
-	background: #D2FFEE url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAYAAAAp8ov1AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAABkSURBVCiR7dLBCYAwFIPhP7Hu40bO5U7uVA/6KqJUBQUPXj4SeM2pdMPYG8gGeCT9fA2tiOxWCjzD+7iwqUlRk4VtcKNInpMiSViiihagVlWm4u8es5zo/OTCVG3l5uh+qvpiArsMY24at1MfAAAAAElFTkSuQmCC') repeat-x 50% 0%;
+	background: #ECE9E2;
 	color: #000000;
 }
 body {
@@ -7,42 +7,37 @@ body {
 	font-size: 10pt;
 }
 a {
-	color: #0093AB;
-	text-decoration: none;
+	color: #702802;
 }
 a:hover {
-	color: #DD0000;
+	text-decoration: none;
 }
 hr {
 	border: none;
-	border-top: 1px solid #B7D9C5;
+	border-top: 1px solid #706B5E;
 }
 .aheader {
+	color: #706B5E;
 }
 .adminbar {
 	text-align: right;
 	clear: both;
 	float: right;
 }
-.adminbar a {
+.adminbar a, .aheader a {
 	text-decoration: none;
 }
 .logo {
 	clear: both;
 	text-align: center;
-	color: #800000;
 }
 .logoTitle {
-	font-family: Tahoma, sans-serif;
-	font-size: 28px;
+	font-family: sans-serif;
+	font-size: 26px;
 	font-weight: bold;
-	letter-spacing: -2px;
-}
-.logoSubtitle {
-	font-size: 10px;
 }
 .theader {
-	background: #E04000;
+	background: #706B5E;
 	color: #FFFFFF;
 	font-weight: bold;
 	text-align: center;
@@ -56,8 +51,8 @@ hr {
 	border-spacing: 1px;
 }
 .postblock {
-	background: #95D2D3;
-	border: 1px solid #000000;
+	background: #706B5E;
+	color: #FFFFFF;
 	padding: 3px 5px;
 	font-weight: bold;
 }
@@ -66,7 +61,7 @@ hr {
 	text-align: center;
 }
 .passvalid {
-	background: #9988EE;
+	background: #706B5E;
 	color: #FFFFFF;
 	font-weight: bold;
 	text-align: center;
@@ -80,7 +75,8 @@ hr {
 	padding-bottom: 4px;
 }
 .managehead {
-	background: #95D2D3;
+	background: #706B5E;
+	color: #FFFFFF;
 	font-size: 14px;
 	padding: 0px;
 }
@@ -90,29 +86,33 @@ hr {
 	padding: 0px;
 }
 .row1 {
-	background: #B6DDDE;
+	background: #D7CFC0;
 }
 .row2 {
-	background: #FFFFFF;
+	background: #BFB5A1;
 }
 .unkfunc {
 	background: inherit;
-	color: #789922;
+	color: #BD3000;
 }
 .filesize {
 	text-decoration: none;
 }
 .filetitle, .replytitle {
 	background: inherit;
-	color: #0F0C5D;
+	color: #B20000;
 	font-weight: bold;
+	font-size: 15px;
+}
+.replytitle {
+	font-size: 14px;
 }
 .postername, .commentpostername {
-	color: #117743;
+	color: #635537;
 	font-weight: bold;
 }
 .postertrip {
-	color: #228854;
+	color: #635537;
 }
 .oldpost {
 	color: #CC1105;
@@ -120,14 +120,16 @@ hr {
 }
 .omittedposts, .abbrev {
 	color: #707070;
+	font-style: italic;
 }
 .reply {
-	background-color: #B6DDDE;
-	border: 1px solid #8FCCCD;
+	background-color: #D7CFC0;
+	border: 1px solid #BFB5A1;
 	border-top: none; border-left: none;
 	padding: 2px;
 }
 .doubledash {
+	color: #707070;
  	vertical-align: top;
 	clear: both;
 	float: left;
@@ -135,32 +137,25 @@ hr {
 .thumbnailmsg {
 	font-size: 10px;
 }
+.postcaptcha {
+	color: #706B5E;
+}
 .highlight {
-	background-color: #9988EE;
-	border: 1px solid #717FB2;
+	background-color: #BFB5A1;
+	border: 1px solid #BFB5A1;
 	border-top: none; border-left: none;
 	padding: 2px;
 }
-.quotelink {
-	color: #DD0000;
-}
 input[type="text"], input[type="password"], textarea {
 	margin: 0px;
-	padding: 2px 4px 4px 4px;
-	border: 1px solid #AAA;
-	outline: none;
-}
-input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
-	margin: 0px;
-	padding: 2px 4px 4px 4px;
-	border: 1px solid #0093AB;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #706B5E;
 	outline: none;
 }
 table[border="1"] {
-	background: #B6DDDE;
-	border: solid #8FCCCD;
+	background: #D7CFC0;
+	border: solid #BFB5A1;
 	border-width: 0 1px 1px 0;
-	color: #8899AA;
 	padding: 0 6px;
 }
 table[border="1"] a {

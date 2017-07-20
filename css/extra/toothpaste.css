@@ -17,8 +17,10 @@ a:hover {
 .logo {
 	clear: both;
 	text-align: center;
-	font-size: 2em;
 	color: #000080;
+}
+.logoTitle {
+	font-size: 2em;
 	width: 100%;
 }
 .theader {

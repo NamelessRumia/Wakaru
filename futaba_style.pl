@@ -54,7 +54,8 @@ form .trap { display:none }
 <if SHOWTITLEIMG==1><img src="<var expand_filename(TITLEIMG)>" alt="<const TITLE>" /></if>
 <if SHOWTITLEIMG==2><img src="<var expand_filename(TITLEIMG)>" onclick="this.src=this.src;" alt="<const TITLE>" /></if>
 <if SHOWTITLEIMG and SHOWTITLETXT><br /></if>
-<if SHOWTITLETXT><const TITLE></if>
+<if SHOWTITLETXT><div class="logoTitle"><const TITLE></div></if>
+<div class="logoSubtitle"><const SUBTITLE></div>
 </div><hr />
 };
 

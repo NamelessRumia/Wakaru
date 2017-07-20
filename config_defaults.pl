@@ -19,6 +19,7 @@ BEGIN {
 	eval "use constant USE_TEMPFILES => 1" unless(defined &USE_TEMPFILES);
 
 	eval "use constant TITLE => 'Wakaru image board'" unless(defined &TITLE);
+	eval "use constant SUBTITLE => ''" unless(defined &SUBTITLE);
 	eval "use constant SHOWTITLETXT => 1" unless(defined &SHOWTITLETXT);
 	eval "use constant SHOWTITLEIMG => 0" unless(defined &SHOWTITLEIMG);
 	eval "use constant TITLEIMG => 'title.jpg'" unless(defined &TITLEIMG);

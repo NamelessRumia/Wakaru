@@ -30,10 +30,15 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
+}
+.logoTitle {
 	font-family: Tahoma, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
 	letter-spacing: -2px;
+}
+.logoSubtitle {
+	font-size: 10px;
 }
 .theader {
 	background: #111111;
@@ -140,13 +145,13 @@ hr {
 }
 input[type="text"], input[type="password"], textarea {
 	margin: 0px;
-	padding: 2px 4px 3px 4px;
+	padding: 2px 4px 4px 4px;
 	border: 1px solid #AAA;
 	outline: none;
 }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 	margin: 0px;
-	padding: 2px 4px 3px 4px;
+	padding: 2px 4px 4px 4px;
 	border: 1px solid #000;
 	outline: none;
 }

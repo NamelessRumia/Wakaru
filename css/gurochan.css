@@ -30,10 +30,15 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
+	color: #AF0A0F;
+}
+.logoTitle {
 	font-family: Tahoma, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
-	color: #AF0A0F;
+}
+.logoSubtitle {
+	font-size: 10px;
 }
 .theader {
 	background: #CA927B;

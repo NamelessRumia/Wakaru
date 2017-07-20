@@ -20,6 +20,8 @@ a:hover {
 .logo {
 	clear: both;
 	text-align: center;
+}
+.logoTitle {
 	font-family: sans-serif;
 	font-size: 26px;
 	font-weight: bold;
