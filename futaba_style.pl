@@ -104,6 +104,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 </if>
 <form id="delform" action="<var $self>" method="post">
 <loop $threads>
+	<div class="thread">
 	<loop $posts>
 		<if !$parent>
 			<if $image>
@@ -185,7 +186,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 			</blockquote>
 			</td></tr></tbody></table>
 		</if>
-	</loop><br clear="left" />
+	</loop><br clear="left" /></div>
 	<hr />
 </loop>
 <table class="userdelete"><tbody><tr><td>
