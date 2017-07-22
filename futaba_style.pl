@@ -104,6 +104,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 </if>
 <form id="delform" action="<var $self>" method="post">
 <loop $threads>
+	<div class="thread">
 	<loop $posts>
 		<if !$parent>
 			<if $image>
@@ -135,7 +136,6 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 				<if $thread><a href="javascript:insert('&gt;&gt;<var $num>')">No.<var $num></a></if>
 				</span>&nbsp;
 				<if !$thread>[<a href="<var get_reply_link($num,0)>"><const S_REPLY></a>]</if>
-			</div>
 			
 			<blockquote>
 			<var $comment>
@@ -186,7 +186,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 			</blockquote>
 			</td></tr></tbody></table>
 		</if>
-	</loop><br clear="left" />
+	</loop><br clear="left" /></div>
 	<hr />
 </loop>
 <table class="userdelete"><tbody><tr><td>
