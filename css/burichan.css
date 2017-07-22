@@ -22,6 +22,9 @@ a:hover {
 	font-size: 2em;
 	width: 100%;
 }
+.logoSubtitle {
+	font-size: small;
+}
 .theader {
 	background: #0010E0;
 	color: #FFFFFF;

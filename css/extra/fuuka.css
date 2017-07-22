@@ -22,6 +22,9 @@ a:hover {
 	font: bold 2em Verdana, Tahoma, sans-serif;
 	width: 100%;
 }
+.logoSubtitle {
+	font-size: small;
+}
 .logo img, .logo br { /* uncomment this to make the title image disappear */
 	/* display: none; */
 }
