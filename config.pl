@@ -25,7 +25,6 @@
 
 # Page look
 #use constant TITLE => 'Wakaru image board';	# Name of this image board
-#use constant SUBTITLE => '';					# Subtitle of this image board
 #use constant SHOWTITLETXT => 1;				# Show TITLE at top (1: yes  0: no)
 #use constant SHOWTITLEIMG => 0;				# Show image at top (0: no, 1: single, 2: rotating)
 #use constant TITLEIMG => 'title.jpg';			# Title image (point to a script file if rotating)
