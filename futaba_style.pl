@@ -79,23 +79,40 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 	<if FORCED_ANON><input type="hidden" name="name" /></if>
 	<if SPAM_TRAP><div class="trap"><const S_SPAMTRAP><input type="text" name="name" size="28" autocomplete="off" /><input type="text" name="link" size="28" autocomplete="off" /></div></if>
 	<table><tbody>
-	<if !FORCED_ANON><tr><td class="postblock"><const S_NAME></td><td><input type="text" name="field1" size="28" /></td></tr></if>
-	<tr><td class="postblock"><const S_EMAIL></td><td><input type="text" name="field2" size="28" /></td></tr>
-	<tr><td class="postblock"><const S_SUBJECT></td><td><input type="text" name="field3" size="35" />
-	<input type="submit" value="<const S_SUBMIT>" /></td></tr>
-	<tr><td class="postblock"><const S_COMMENT></td><td><textarea name="field4" cols="48" rows="4"></textarea></td></tr>
-	<if $image_inp>
-		<tr><td class="postblock"><const S_UPLOADFILE></td><td><input type="file" name="file" size="35" />
-		<if $textonly_inp><label>[<input type="checkbox" name="nofile" value="on" /><const S_NOFILE> ]</label></if>
-		</td></tr>
-	</if>
-	<tr><td class="postblock"><const S_BACKTO></td> <td><label>[<input name="gb2" value="board" type="radio" /> <const S_REBOARD> ]</label> <label>[<input name="gb2" value="thread" checked="checked" type="radio" /> <const S_RETHREAD> ]</label> </td></tr>
-	<if ENABLE_CAPTCHA>
-		<tr><td class="postblock"><const S_CAPTCHA></td><td><input type="text" name="captcha" size="10" />
-		<img alt="" style="vertical-align: middle;" src="<var expand_filename(CAPTCHA_SCRIPT)>?key=<var get_captcha_key($thread)>&amp;dummy=<var $dummy>" />
-		</td></tr>
-	</if>
-	<tr><td class="postblock"><const S_DELPASS></td><td><input type="password" name="password" size="8" /> <small><const S_DELEXPL></small></td></tr>
+	<if !FORCED_ANON><tr>
+		<td class="postblock"><const S_NAME></td>
+		<td><input type="text" name="field1" size="28" /></td>
+	</tr></if>
+	<tr>
+		<td class="postblock"><const S_EMAIL></td>
+		<td><input type="text" name="field2" size="28" /></td>
+	</tr>
+	<tr>
+		<td class="postblock"><const S_SUBJECT></td>
+		<td><input type="text" name="field3" size="35" /><input type="submit" value="<const S_SUBMIT>" /></td>
+	</tr>
+	<tr>
+		<td class="postblock"><const S_COMMENT></td>
+		<td><textarea name="field4" cols="48" rows="4"></textarea></td>
+	</tr>
+	<if $image_inp><tr>
+		<td class="postblock"><const S_UPLOADFILE></td>
+		<td><input type="file" name="file" size="35" />
+		<if $textonly_inp><label>[<input type="checkbox" name="nofile" value="on" /><const S_NOFILE> ]</label></if></td>
+	</tr></if>
+	<tr>
+		<td class="postblock"><const S_BACKTO></td>
+		<td><label>[<input name="gb2" value="board" type="radio" /> <const S_REBOARD> ]</label> <label>[<input name="gb2" value="thread" checked="checked" type="radio" /> <const S_RETHREAD> ]</label> </td>
+	</tr>
+	<if ENABLE_CAPTCHA><tr>
+		<td class="postblock"><const S_CAPTCHA></td>
+		<td><input type="text" name="captcha" size="10" />
+		<img alt="" style="vertical-align: middle;" src="<var expand_filename(CAPTCHA_SCRIPT)>?key=<var get_captcha_key($thread)>&amp;dummy=<var $dummy>" /></td>
+	</tr></if>
+	<tr>
+		<td class="postblock"><const S_DELPASS></td>
+		<td><input type="password" name="password" size="8" /> <small><const S_DELEXPL></small></td>
+	</tr>
 	<tr><td colspan="2">
 	<div class="rules">}.include("include/rules.html").q{</div></td></tr>
 	</tbody></table></form></div>
