@@ -123,9 +123,6 @@ hr {
 }
 .doubledash {
  	/* display: none; */
- 	vertical-align: top;
-	clear: both;
-	float: left;
 }
 .thumbnailmsg {
 	font-size: 10px;

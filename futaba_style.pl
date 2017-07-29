@@ -166,7 +166,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 			</if>
 		</if>
 		<if $parent>
-			<table><tbody><tr><td class="doubledash">&gt;&gt;</td>
+			<table><tbody><tr><td class="doubledash" valign="top">&gt;&gt;</td>
 			<td class="reply" id="reply<var $num>">
 			<a name="<var $num>"></a>
 			<label><input type="checkbox" name="delete" value="<var $num>" />
