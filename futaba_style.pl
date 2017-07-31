@@ -21,7 +21,9 @@ form .trap { display:none }
 .thumb { border: none; float: left; margin: 2px 20px }
 .nothumb { float: left; background: #eee; border: 2px dashed #aaa; text-align: center; margin: 2px 20px; padding: 1em 0.5em 1em 0.5em; }
 .reflink a { color: inherit; text-decoration: none }
+.doubledash { float:left; margin-right: 2px; }
 .reply .filesize { margin-left: 20px }
+.reply { display: table; margin-top: 2px; margin-bottom: 4px; }
 .userdelete { float: right; text-align: center; white-space: nowrap }
 .replypage .replylink { display: none }
 .code { font-family: monospace; }
@@ -166,44 +168,47 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 			</if>
 		</if>
 		<if $parent>
-			<table><tbody><tr><td class="doubledash" valign="top">&gt;&gt;</td>
-			<td class="reply" id="reply<var $num>">
-			<a name="<var $num>"></a>
-			<label><input type="checkbox" name="delete" value="<var $num>" />
-			<span class="replytitle"><var $subject></span>
-			<if $email><span class="commentpostername"><a href="<var $email>"><var $name></a></span><if $trip><span class="postertrip"><a href="<var $email>"><var $trip></a></span></if></if>
-			<if !$email><span class="commentpostername"><var $name></span><if $trip><span class="postertrip"><var $trip></span></if></if>
-			<var $date></label>
-			<span class="reflink">
-			<if !$thread><a href="<var get_reply_link($parent,0)>#i<var $num>">No.<var $num></a></if>
-			<if $thread><a href="javascript:insert('&gt;&gt;<var $num>')">No.<var $num></a></if>
-			</span>&nbsp;
-			<if $image>
-				<br />
-				<span class="filesize"><const S_PICNAME><a target="_blank" href="<var expand_image_filename($image)>"><var get_filename($image)></a>
-				- (<var $size> B, <var $width>x<var $height>)</span>
-				<span class="thumbnailmsg"><const S_THUMB></span><br />
-				<if $thumbnail>
-					<a target="_blank" href="<var expand_image_filename($image)>">
-					<img src="<var expand_filename($thumbnail)>" width="<var $tn_width>" height="<var $tn_height>" alt="<var $size>" class="thumb" /></a>
-				</if>
-				<if !$thumbnail>
-					<if DELETED_THUMBNAIL>
-						<a target="_blank" href="<var expand_image_filename(DELETED_IMAGE)>">
-						<img src="<var expand_filename(DELETED_THUMBNAIL)>" width="<var $tn_width>" height="<var $tn_height>" alt="" class="thumb" /></a>
+			<div><div class="doubledash">&gt;&gt;</div>
+				<div class="reply" id="reply<var $num>">
+					<a name="<var $num>"></a>
+					<label>
+						<input type="checkbox" name="delete" value="<var $num>" />
+						<span class="replytitle"><var $subject></span>
+						<if $email><span class="commentpostername"><a href="<var $email>"><var $name></a></span><if $trip><span class="postertrip"><a href="<var $email>"><var $trip></a></span></if></if>
+						<if !$email><span class="commentpostername"><var $name></span><if $trip><span class="postertrip"><var $trip></span></if></if>
+						<var $date>
+					</label>
+					<span class="reflink">
+					<if !$thread><a href="<var get_reply_link($parent,0)>#i<var $num>">No.<var $num></a></if>
+					<if $thread><a href="javascript:insert('&gt;&gt;<var $num>')">No.<var $num></a></if>
+					</span>&nbsp;
+				<if $image>
+					<br />
+					<span class="filesize"><const S_PICNAME><a target="_blank" href="<var expand_image_filename($image)>"><var get_filename($image)></a> - (<var $size> B, <var $width>x<var $height>)</span>
+					<span class="thumbnailmsg"><const S_THUMB></span><br />
+					<if $thumbnail>
+						<a target="_blank" href="<var expand_image_filename($image)>">
+						<img src="<var expand_filename($thumbnail)>" width="<var $tn_width>" height="<var $tn_height>" alt="<var $size>" class="thumb" /></a>
 					</if>
-					<if !DELETED_THUMBNAIL>
-						<div class="nothumb"><a target="_blank" href="<var expand_image_filename($image)>"><const S_NOTHUMB></a></div>
+					<if !$thumbnail>
+						<if DELETED_THUMBNAIL>
+							<a target="_blank" href="<var expand_image_filename(DELETED_IMAGE)>">
+							<img src="<var expand_filename(DELETED_THUMBNAIL)>" width="<var $tn_width>" height="<var $tn_height>" alt="" class="thumb" /></a>
+						</if>
+						<if !DELETED_THUMBNAIL>
+							<div class="nothumb"><a target="_blank" href="<var expand_image_filename($image)>"><const S_NOTHUMB></a></div>
+						</if>
 					</if>
 				</if>
-			</if>
-			<blockquote>
-			<var $comment>
-			<if $abbrev><div class="abbrev"><var sprintf(S_ABBRTEXT,get_reply_link($num,$parent))></div></if>
-			</blockquote>
-			</td></tr></tbody></table>
+				<blockquote>
+				<var $comment>
+				<if $abbrev><div class="abbrev"><var sprintf(S_ABBRTEXT,get_reply_link($num,$parent))></div></if>
+				</blockquote>
+				</div>
+			</div>
 		</if>
-	</loop><br clear="left" /></div>
+	</loop><div style="clear:left;"></div>
+	</div>
 	<hr />
 </loop>
 <table class="userdelete"><tbody><tr><td>
