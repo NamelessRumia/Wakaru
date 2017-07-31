@@ -184,7 +184,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 			</blockquote>
 			</td></tr></tbody></table>
 		</if>
-	</loop><br clear="left" />
+	</loop><div style="clear:left;"></div>
 	<hr />
 </loop>
 <table class="userdelete"><tbody><tr><td>
