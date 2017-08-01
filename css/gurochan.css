@@ -131,7 +131,7 @@ hr {
 	border-top: none; border-left: none;
 	padding: 2px;
 }
-input[type="text"], input[type="password"], input[type="file"], textarea {
+.postinput {
 	background-color: #E6CBC0;
 	border-width: 1px;
 	border-style: solid none none solid;
