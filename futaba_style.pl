@@ -484,7 +484,7 @@ use constant SQL_INTERFACE_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <textarea class="postinput" name="sql" rows="10" cols="60"></textarea>
 <div class="delbuttons"><const S_SQLNUKE>
 <input class="postinput" type="password" name="nuke" value="<var $nuke>" />
-<input class="postinput" type="submit" value="<const S_SQLEXECUTE>" />
+<input type="submit" value="<const S_SQLEXECUTE>" />
 </div>
 </form>
 </div>
