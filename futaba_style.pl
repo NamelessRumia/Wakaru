@@ -78,11 +78,11 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 	<if FORCED_ANON><input type="hidden" name="name" /></if>
 	<if SPAM_TRAP><div class="trap"><const S_SPAMTRAP><input type="text" name="name" size="28" autocomplete="off" /><input type="text" name="link" size="28" autocomplete="off" /></div></if>
 	<table><tbody>
-	<if !FORCED_ANON><tr><td class="postblock"><const S_NAME></td><td><input class="postform" type="text" name="field1" size="28" /></td></tr></if>
-	<tr><td class="postblock"><const S_EMAIL></td><td><input class="postform" type="text" name="field2" size="28" /></td></tr>
-	<tr><td class="postblock"><const S_SUBJECT></td><td><input class="postform" type="text" name="field3" size="35" />
+	<if !FORCED_ANON><tr><td class="postblock"><const S_NAME></td><td><input class="postinput" type="text" name="field1" size="28" /></td></tr></if>
+	<tr><td class="postblock"><const S_EMAIL></td><td><input class="postinput" type="text" name="field2" size="28" /></td></tr>
+	<tr><td class="postblock"><const S_SUBJECT></td><td><input class="postinput" type="text" name="field3" size="35" />
 	<input type="submit" value="<const S_SUBMIT>" /></td></tr>
-	<tr><td class="postblock"><const S_COMMENT></td><td><textarea class="postform" name="field4" cols="48" rows="4"></textarea></td></tr>
+	<tr><td class="postblock"><const S_COMMENT></td><td><textarea class="postinput" name="field4" cols="48" rows="4"></textarea></td></tr>
 	<if $image_inp>
 		<tr><td class="postblock"><const S_UPLOADFILE></td><td><input type="file" name="file" size="35" />
 		<if $textonly_inp><label>[<input type="checkbox" name="nofile" value="on" /><const S_NOFILE> ]</label></if>
@@ -90,11 +90,11 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 	</if>
 	<tr><td class="postblock"><const S_BACKTO></td> <td><label>[<input name="gb2" value="board" type="radio" /> <const S_REBOARD> ]</label> <label>[<input name="gb2" value="thread" checked="checked" type="radio" /> <const S_RETHREAD> ]</label> </td></tr>
 	<if ENABLE_CAPTCHA>
-		<tr><td class="postblock"><const S_CAPTCHA></td><td><input class="postform" type="text" name="captcha" size="10" />
+		<tr><td class="postblock"><const S_CAPTCHA></td><td><input class="postinput" type="text" name="captcha" size="10" />
 		<img alt="" style="vertical-align: middle;" src="<var expand_filename(CAPTCHA_SCRIPT)>?key=<var get_captcha_key($thread)>&amp;dummy=<var $dummy>" />
 		</td></tr>
 	</if>
-	<tr><td class="postblock"><const S_DELPASS></td><td><input class="postform" type="password" name="password" size="8" /> <small><const S_DELEXPL></small></td></tr>
+	<tr><td class="postblock"><const S_DELPASS></td><td><input class="postinput" type="password" name="password" size="8" /> <small><const S_DELEXPL></small></td></tr>
 	<tr><td colspan="2">
 	<div class="rules">}.include("include/rules.html").q{</div></td></tr>
 	</tbody></table></form></div>
@@ -150,7 +150,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 			<table><tbody><tr><td class="doubledash">&gt;&gt;</td>
 			<td class="reply" id="reply<var $num>">
 			<a name="<var $num>"></a>
-			<label><input type="checkbox" name="delete" value="<var $num>" />
+			<label><input class="postinput" type="checkbox" name="delete" value="<var $num>" />
 			<span class="replytitle"><var $subject></span>
 			<if $email><span class="commentpostername"><a href="<var $email>"><var $name></a></span><if $trip><span class="postertrip"><a href="<var $email>"><var $trip></a></span></if></if>
 			<if !$email><span class="commentpostername"><var $name></span><if $trip><span class="postertrip"><var $trip></span></if></if>
@@ -244,7 +244,7 @@ use constant ADMIN_LOGIN_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <div align="center"><form action="<var $self>" method="post">
 <input type="hidden" name="task" value="admin" />
 <const S_ADMINPASS>
-<input type="password" name="berra" size="8" value="" />
+<input class="postform" type="password" name="berra" size="8" value="" />
 <br />
 <label><input type="checkbox" name="savelogin" /> <const S_MANASAVE></label>
 <br />
@@ -314,8 +314,8 @@ use constant POST_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="task" value="deleteall" />
 <input type="hidden" name="admin" value="<var $admin>" />
 <table><tbody>
-<tr><td class="postblock"><const S_BANIPLABEL></td><td><input type="text" name="ip" size="24" /></td></tr>
-<tr><td class="postblock"><const S_BANMASKLABEL></td><td><input type="text" name="mask" size="24" />
+<tr><td class="postblock"><const S_BANIPLABEL></td><td><input class="postform" type="text" name="ip" size="24" /></td></tr>
+<tr><td class="postblock"><const S_BANMASKLABEL></td><td><input class="postform" type="text" name="mask" size="24" />
 <input type="submit" value="<const S_MPDELETEIP>" /></td></tr>
 </tbody></table></form>
 </div><br />
@@ -334,9 +334,9 @@ use constant BAN_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="type" value="ipban" />
 <input type="hidden" name="admin" value="<var $admin>" />
 <table><tbody>
-<tr><td class="postblock"><const S_BANIPLABEL></td><td><input type="text" name="ip" size="24" /></td></tr>
-<tr><td class="postblock"><const S_BANMASKLABEL></td><td><input type="text" name="mask" size="24" /></td></tr>
-<tr><td class="postblock"><const S_BANCOMMENTLABEL></td><td><input type="text" name="comment" size="16" />
+<tr><td class="postblock"><const S_BANIPLABEL></td><td><input class="postinput" type="text" name="ip" size="24" /></td></tr>
+<tr><td class="postblock"><const S_BANMASKLABEL></td><td><input class="postinput" type="text" name="mask" size="24" /></td></tr>
+<tr><td class="postblock"><const S_BANCOMMENTLABEL></td><td><input class="postinput" type="text" name="comment" size="16" />
 <input type="submit" value="<const S_BANIP>" /></td></tr>
 </tbody></table></form>
 </td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="bottom">
@@ -345,9 +345,9 @@ use constant BAN_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="type" value="whitelist" />
 <input type="hidden" name="admin" value="<var $admin>" />
 <table><tbody>
-<tr><td class="postblock"><const S_BANIPLABEL></td><td><input type="text" name="ip" size="24" /></td></tr>
-<tr><td class="postblock"><const S_BANMASKLABEL></td><td><input type="text" name="mask" size="24" /></td></tr>
-<tr><td class="postblock"><const S_BANCOMMENTLABEL></td><td><input type="text" name="comment" size="16" />
+<tr><td class="postblock"><const S_BANIPLABEL></td><td><input class="postinput" type="text" name="ip" size="24" /></td></tr>
+<tr><td class="postblock"><const S_BANMASKLABEL></td><td><input class="postinput" type="text" name="mask" size="24" /></td></tr>
+<tr><td class="postblock"><const S_BANCOMMENTLABEL></td><td><input class="postinput" type="text" name="comment" size="16" />
 <input type="submit" value="<const S_BANWHITELIST>" /></td></tr>
 </tbody></table></form>
 </td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td valign="bottom">
@@ -356,8 +356,8 @@ use constant BAN_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="type" value="wordban" />
 <input type="hidden" name="admin" value="<var $admin>" />
 <table><tbody>
-<tr><td class="postblock"><const S_BANWORDLABEL></td><td><input type="text" name="string" size="24" /></td></tr>
-<tr><td class="postblock"><const S_BANCOMMENTLABEL></td><td><input type="text" name="comment" size="16" />
+<tr><td class="postblock"><const S_BANWORDLABEL></td><td><input class="postinput" type="text" name="string" size="24" /></td></tr>
+<tr><td class="postblock"><const S_BANCOMMENTLABEL></td><td><input class="postinput" type="text" name="comment" size="16" />
 <input type="submit" value="<const S_BANWORD>" /></td></tr>
 </tbody></table></form>
 </td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="bottom">
@@ -366,8 +366,8 @@ use constant BAN_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="type" value="trust" />
 <input type="hidden" name="admin" value="<var $admin>" />
 <table><tbody>
-<tr><td class="postblock"><const S_BANTRUSTTRIP></td><td><input type="text" name="string" size="24" /></td></tr>
-<tr><td class="postblock"><const S_BANCOMMENTLABEL></td><td><input type="text" name="comment" size="16" />
+<tr><td class="postblock"><const S_BANTRUSTTRIP></td><td><input class="postinput" type="text" name="string" size="24" /></td></tr>
+<tr><td class="postblock"><const S_BANCOMMENTLABEL></td><td><input class="postinput" type="text" name="comment" size="16" />
 <input type="submit" value="<const S_BANTRUST>" /></td></tr>
 </tbody></table></form>
 </td></tr></tbody></table>
@@ -456,7 +456,7 @@ use constant SPAM_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="button" value="<const S_SPAMCLEAR>" onclick="document.forms[0].spam.value=''" />
 <input type="reset" value="<const S_SPAMRESET>" />
 </div>
-<textarea name="spam" rows="<var $spamlines>" cols="60"><var $spam></textarea>
+<textarea class="postinput" name="spam" rows="<var $spamlines>" cols="60"><var $spam></textarea>
 <div class="buttons">
 <input type="submit" value="<const S_SPAMSUBMIT>" />
 <input type="button" value="<const S_SPAMCLEAR>" onclick="document.forms[0].spam.value=''" />
@@ -483,8 +483,8 @@ use constant SQL_INTERFACE_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="admin" value="<var $admin>" />
 <textarea name="sql" rows="10" cols="60"></textarea>
 <div class="delbuttons"><const S_SQLNUKE>
-<input type="password" name="nuke" value="<var $nuke>" />
-<input type="submit" value="<const S_SQLEXECUTE>" />
+<input class="postinput" type="password" name="nuke" value="<var $nuke>" />
+<input class="postinput" type="submit" value="<const S_SQLEXECUTE>" />
 </div>
 </form>
 </div>
@@ -503,16 +503,16 @@ use constant ADMIN_POST_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="no_captcha" value="1" />
 <input type="hidden" name="no_format" value="1" />
 <table><tbody>
-<tr><td class="postblock"><const S_NAME></td><td><input type="text" name="field1" size="28" /></td></tr>
-<tr><td class="postblock"><const S_EMAIL></td><td><input type="text" name="field2" size="28" /></td></tr>
-<tr><td class="postblock"><const S_SUBJECT></td><td><input type="text" name="field3" size="35" />
+<tr><td class="postblock"><const S_NAME></td><td><input class="postinput" type="text" name="field1" size="28" /></td></tr>
+<tr><td class="postblock"><const S_EMAIL></td><td><input class="postinput" type="text" name="field2" size="28" /></td></tr>
+<tr><td class="postblock"><const S_SUBJECT></td><td><input class="postinput" type="text" name="field3" size="35" />
 <input type="submit" value="<const S_SUBMIT>" /></td></tr>
-<tr><td class="postblock"><const S_COMMENT></td><td><textarea name="field4" cols="48" rows="4"></textarea></td></tr>
+<tr><td class="postblock"><const S_COMMENT></td><td><textarea class="postinput" name="field4" cols="48" rows="4"></textarea></td></tr>
 <tr><td class="postblock"><const S_UPLOADFILE></td><td><input type="file" name="file" size="35" />
 [<label><input type="checkbox" name="nofile" value="on" /><const S_NOFILE> ]</label>
 </td></tr>
-<tr><td class="postblock"><const S_PARENT></td><td><input type="text" name="parent" size="8" /></td></tr>
-<tr><td class="postblock"><const S_DELPASS></td><td><input type="password" name="password" size="8" /><const S_DELEXPL></td></tr>
+<tr><td class="postblock"><const S_PARENT></td><td><input class="postinput" type="text" name="parent" size="8" /></td></tr>
+<tr><td class="postblock"><const S_DELPASS></td><td><input class="postinput" type="password" name="password" size="8" /><const S_DELEXPL></td></tr>
 </tbody></table></form></div><hr />
 <script type="text/javascript">set_inputs("postform")</script>
 }.NORMAL_FOOT_INCLUDE);
