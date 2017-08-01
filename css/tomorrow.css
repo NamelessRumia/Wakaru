@@ -138,13 +138,13 @@ hr {
 .quotelink {
 	color: #5F89AC;
 }
-input[type="text"], input[type="password"], textarea {
+.postinput {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #AAA;
 	outline: none;
 }
-input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+.postinput {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #000;
