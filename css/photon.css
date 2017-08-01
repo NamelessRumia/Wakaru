@@ -53,6 +53,16 @@ hr {
 	padding: 3px 5px;
 	font-weight: bold;
 }
+.postinput {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #AAA;
+}
+.postinput:focus {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #EEAA88;
+}
 .footer {
 	font-size: 12px;
 	text-align: center;
@@ -122,16 +132,6 @@ hr {
 	background-color: #CCCCCC;
 	border: 1px solid #CCCCCC;
 	padding: 2px;
-}
-.postinput {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #AAA;
-}
-.postinput:focus {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #EEAA88;
 }
 table[border="1"] {
 	background: #DDDDDD;
