@@ -190,7 +190,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 <table class="userdelete"><tbody><tr><td>
 <input type="hidden" name="task" value="delete" />
 <const S_REPDEL>[<label><input type="checkbox" name="fileonly" value="on" /><const S_DELPICONLY></label>]<br />
-<const S_DELKEY><input type="password" name="password" size="8" />
+<const S_DELKEY><input class="postinput" size="8" type="password" name="password" size="8" />
 <input value="<const S_DELETE>" type="submit" /></td></tr></tbody></table>
 </form>
 <script type="text/javascript">set_delpass("delform")</script>
