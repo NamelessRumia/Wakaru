@@ -56,6 +56,18 @@ hr {
 	padding: 3px 5px;
 	font-weight: bold;
 }
+.postinput {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #AAA;
+	outline: none;
+}
+.postinput:focus {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #EA8EA8;
+	outline: none;
+}
 .footer {
 	font-size: 12px;
 	text-align: center;
@@ -140,18 +152,6 @@ hr {
 }
 .quotelink {
 	color: #000080;
-}
-.postinput {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #AAA;
-	outline: none;
-}
-.postinput:focus {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #EA8EA8;
-	outline: none;
 }
 table[border="1"] {
 	background: #F0E0D6;
