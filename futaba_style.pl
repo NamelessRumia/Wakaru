@@ -150,7 +150,7 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 			<table><tbody><tr><td class="doubledash">&gt;&gt;</td>
 			<td class="reply" id="reply<var $num>">
 			<a name="<var $num>"></a>
-			<label><input class="postinput" type="checkbox" name="delete" value="<var $num>" />
+			<label><input type="checkbox" name="delete" value="<var $num>" />
 			<span class="replytitle"><var $subject></span>
 			<if $email><span class="commentpostername"><a href="<var $email>"><var $name></a></span><if $trip><span class="postertrip"><a href="<var $email>"><var $trip></a></span></if></if>
 			<if !$email><span class="commentpostername"><var $name></span><if $trip><span class="postertrip"><var $trip></span></if></if>
