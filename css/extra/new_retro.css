@@ -50,6 +50,17 @@ hr {
 	padding: 3px 5px;
 	font-weight: bold;
 }
+.postinput {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+	-o-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+}
 .footer {
 	font-size: 12px;
 	text-align: center;
@@ -134,17 +145,6 @@ hr {
 	border: 1px solid #DDDDDD;
 	border-top: none; border-left: none;
 	padding: 2px;
-}
-input[type="text"], input[type="password"], textarea {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #CCC;
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-	-webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
-	-o-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
-	transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
 }
 table[border="1"] {
 	background: #EFEFEF;
