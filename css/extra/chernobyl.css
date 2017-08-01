@@ -58,6 +58,11 @@ hr {
 	padding: 3px 5px;
 	font-weight: bold;
 }
+.postinput {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #BBBBBB;
+}
 .footer {
 	font-size: 12px;
 	text-align: center;
@@ -128,11 +133,6 @@ hr {
 	background-color: #CCCCCC;
 	border: 1px solid #CCCCCC;
 	padding: 2px;
-}
-input[type="text"], input[type="password"], textarea {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #BBBBBB;
 }
 table[border="1"] {
 	background: inherit;

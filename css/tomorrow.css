@@ -60,6 +60,18 @@ hr {
 	padding: 3.5px 5px;
 	font-weight: bold;
 }
+.postinput {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #AAA;
+	outline: none;
+}
+.postinput:hover {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #000;
+	outline: none;
+}
 .footer {
 	font-size: 12px;
 	text-align: center;
@@ -139,18 +151,6 @@ hr {
 }
 .quotelink {
 	color: #5F89AC;
-}
-input[type="text"], input[type="password"], textarea {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #AAA;
-	outline: none;
-}
-input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #000;
-	outline: none;
 }
 table[border="1"] {
 	background: #282A2E;

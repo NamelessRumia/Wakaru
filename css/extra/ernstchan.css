@@ -56,6 +56,12 @@ hr {
 	padding: 3.5px 5px;
 	font-weight: bold;
 }
+.postinput {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #706B5E;
+	outline: none;
+}
 .footer {
 	font-size: 12px;
 	text-align: center;
@@ -142,12 +148,6 @@ hr {
 	border: 1px solid #BFB5A1;
 	border-top: none; border-left: none;
 	padding: 2px;
-}
-input[type="text"], input[type="password"], textarea {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #706B5E;
-	outline: none;
 }
 table[border="1"] {
 	background: #D7CFC0;
