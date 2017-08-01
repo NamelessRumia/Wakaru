@@ -244,7 +244,7 @@ use constant ADMIN_LOGIN_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <div align="center"><form action="<var $self>" method="post">
 <input type="hidden" name="task" value="admin" />
 <const S_ADMINPASS>
-<input class="postform" type="password" name="berra" size="8" value="" />
+<input class="postinput" type="password" name="berra" size="8" value="" />
 <br />
 <label><input type="checkbox" name="savelogin" /> <const S_MANASAVE></label>
 <br />
@@ -314,8 +314,8 @@ use constant POST_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="task" value="deleteall" />
 <input type="hidden" name="admin" value="<var $admin>" />
 <table><tbody>
-<tr><td class="postblock"><const S_BANIPLABEL></td><td><input class="postform" type="text" name="ip" size="24" /></td></tr>
-<tr><td class="postblock"><const S_BANMASKLABEL></td><td><input class="postform" type="text" name="mask" size="24" />
+<tr><td class="postblock"><const S_BANIPLABEL></td><td><input class="postinput" type="text" name="ip" size="24" /></td></tr>
+<tr><td class="postblock"><const S_BANMASKLABEL></td><td><input class="postinput" type="text" name="mask" size="24" />
 <input type="submit" value="<const S_MPDELETEIP>" /></td></tr>
 </tbody></table></form>
 </div><br />
@@ -415,8 +415,8 @@ use constant PROXY_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="type" value="white" />
 <input type="hidden" name="admin" value="<var $admin>" />
 <table><tbody>
-<tr><td class="postblock"><const S_PROXYIPLABEL></td><td><input type="text" name="ip" size="24" /></td></tr>
-<tr><td class="postblock"><const S_PROXYTIMELABEL></td><td><input type="text" name="timestamp" size="24" />
+<tr><td class="postblock"><const S_PROXYIPLABEL></td><td><input class="postinput" type="text" name="ip" size="24" /></td></tr>
+<tr><td class="postblock"><const S_PROXYTIMELABEL></td><td><input class="postinput" type="text" name="timestamp" size="24" />
 <input type="submit" value="<const S_PROXYWHITELIST>" /></td></tr>
 </tbody></table></form>
 </td></tr></tbody></table>
@@ -481,7 +481,7 @@ use constant SQL_INTERFACE_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <form action="<var $self>" method="post">
 <input type="hidden" name="task" value="sql" />
 <input type="hidden" name="admin" value="<var $admin>" />
-<textarea name="sql" rows="10" cols="60"></textarea>
+<textarea class="postinput" name="sql" rows="10" cols="60"></textarea>
 <div class="delbuttons"><const S_SQLNUKE>
 <input class="postinput" type="password" name="nuke" value="<var $nuke>" />
 <input class="postinput" type="submit" value="<const S_SQLEXECUTE>" />
