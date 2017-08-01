@@ -51,6 +51,13 @@ hr {
 	padding: 0 5px;
 	font-weight: bold;
 }
+.postinput {
+	background-color: #E6CBC0;
+	border-width: 1px;
+	border-style: solid none none solid;
+	border-color: #CA927B;
+	color: #800000;
+}
 .footer {
 	font-size: 12px;
 	text-align: center;
@@ -130,13 +137,6 @@ hr {
 	border: 1px solid #CA927B;
 	border-top: none; border-left: none;
 	padding: 2px;
-}
-.postinput {
-	background-color: #E6CBC0;
-	border-width: 1px;
-	border-style: solid none none solid;
-	border-color: #CA927B;
-	color: #800000;
 }
 table[border="1"] {
 	background: #D9AF9E;
