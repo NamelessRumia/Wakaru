@@ -123,12 +123,12 @@ hr {
 	border: 1px solid #CCCCCC;
 	padding: 2px;
 }
-input[type="text"], input[type="password"], textarea {
+.postinput {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #AAA;
 }
-input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+.postinput:focus {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #EEAA88;
