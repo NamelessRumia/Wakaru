@@ -23,7 +23,7 @@ form .trap { display:none }
 .reflink a { color: inherit; text-decoration: none }
 .doubledash { float:left; margin-right: 2px; }
 .reply .filesize { margin-left: 20px }
-.reply { display: table; margin-top: 2px; margin-bottom: 4px; }
+.reply, .highlight { display: table; margin-top: 2px; margin-bottom: 4px; }
 .userdelete { float: right; text-align: center; white-space: nowrap }
 .replypage .replylink { display: none }
 .code { font-family: monospace; }
