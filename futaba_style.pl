@@ -21,9 +21,7 @@ form .trap { display:none }
 .thumb { border: none; float: left; margin: 2px 20px }
 .nothumb { float: left; background: #eee; border: 2px dashed #aaa; text-align: center; margin: 2px 20px; padding: 1em 0.5em 1em 0.5em; }
 .reflink a { color: inherit; text-decoration: none }
-.doubledash { float:left; margin-right: 2px; }
 .reply .filesize { margin-left: 20px }
-.reply, .highlight { display: table; margin-top: 2px; margin-bottom: 4px; }
 .userdelete { float: right; text-align: center; white-space: nowrap }
 .replypage .replylink { display: none }
 .code { font-family: monospace; }
@@ -56,8 +54,7 @@ form .trap { display:none }
 <if SHOWTITLEIMG==1><img src="<var expand_filename(TITLEIMG)>" alt="<const TITLE>" /></if>
 <if SHOWTITLEIMG==2><img src="<var expand_filename(TITLEIMG)>" onclick="this.src=this.src;" alt="<const TITLE>" /></if>
 <if SHOWTITLEIMG and SHOWTITLETXT><br /></if>
-<if SHOWTITLETXT><div class="logoTitle"><const TITLE></div></if>
-<div class="logoSubtitle"><const SUBTITLE></div>
+<if SHOWTITLETXT><const TITLE></if>
 </div><hr />
 };
 
@@ -81,40 +78,23 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 	<if FORCED_ANON><input type="hidden" name="name" /></if>
 	<if SPAM_TRAP><div class="trap"><const S_SPAMTRAP><input type="text" name="name" size="28" autocomplete="off" /><input type="text" name="link" size="28" autocomplete="off" /></div></if>
 	<table><tbody>
-	<if !FORCED_ANON><tr>
-		<td class="postblock"><const S_NAME></td>
-		<td><input class="postinput" type="text" name="field1" size="28" /></td>
-	</tr></if>
-	<tr>
-		<td class="postblock"><const S_EMAIL></td>
-		<td><input class="postinput" type="text" name="field2" size="28" /></td>
-	</tr>
-	<tr>
-		<td class="postblock"><const S_SUBJECT></td>
-		<td><input class="postinput" type="text" name="field3" size="35" /><input type="submit" value="<const S_SUBMIT>" /></td>
-	</tr>
-	<tr>
-		<td class="postblock"><const S_COMMENT></td>
-		<td><textarea class="postinput" name="field4" cols="48" rows="4"></textarea></td>
-	</tr>
-	<if $image_inp><tr>
-		<td class="postblock"><const S_UPLOADFILE></td>
-		<td><input type="file" name="file" size="35" />
-		<if $textonly_inp><label>[<input type="checkbox" name="nofile" value="on" /><const S_NOFILE> ]</label></if></td>
-	</tr></if>
-	<tr>
-		<td class="postblock"><const S_BACKTO></td>
-		<td><label>[<input name="gb2" value="board" type="radio" /> <const S_REBOARD> ]</label> <label>[<input name="gb2" value="thread" checked="checked" type="radio" /> <const S_RETHREAD> ]</label> </td>
-	</tr>
-	<if ENABLE_CAPTCHA><tr>
-		<td class="postblock"><const S_CAPTCHA></td>
-		<td><input class="postinput" type="text" name="captcha" size="10" />
-		<img alt="" style="vertical-align: middle;" src="<var expand_filename(CAPTCHA_SCRIPT)>?key=<var get_captcha_key($thread)>&amp;dummy=<var $dummy>" /></td>
-	</tr></if>
-	<tr>
-		<td class="postblock"><const S_DELPASS></td>
-		<td><input class="postinput" type="password" name="password" size="8" /> <small><const S_DELEXPL></small></td>
-	</tr>
+	<if !FORCED_ANON><tr><td class="postblock"><const S_NAME></td><td><input class="postinput" type="text" name="field1" size="28" /></td></tr></if>
+	<tr><td class="postblock"><const S_EMAIL></td><td><input class="postinput" type="text" name="field2" size="28" /></td></tr>
+	<tr><td class="postblock"><const S_SUBJECT></td><td><input class="postinput" type="text" name="field3" size="35" />
+	<input type="submit" value="<const S_SUBMIT>" /></td></tr>
+	<tr><td class="postblock"><const S_COMMENT></td><td><textarea class="postinput" name="field4" cols="48" rows="4"></textarea></td></tr>
+	<if $image_inp>
+		<tr><td class="postblock"><const S_UPLOADFILE></td><td><input type="file" name="file" size="35" />
+		<if $textonly_inp><label>[<input type="checkbox" name="nofile" value="on" /><const S_NOFILE> ]</label></if>
+		</td></tr>
+	</if>
+	<tr><td class="postblock"><const S_BACKTO></td> <td><label>[<input name="gb2" value="board" type="radio" /> <const S_REBOARD> ]</label> <label>[<input name="gb2" value="thread" checked="checked" type="radio" /> <const S_RETHREAD> ]</label> </td></tr>
+	<if ENABLE_CAPTCHA>
+		<tr><td class="postblock"><const S_CAPTCHA></td><td><input class="postinput" type="text" name="captcha" size="10" />
+		<img alt="" style="vertical-align: middle;" src="<var expand_filename(CAPTCHA_SCRIPT)>?key=<var get_captcha_key($thread)>&amp;dummy=<var $dummy>" />
+		</td></tr>
+	</if>
+	<tr><td class="postblock"><const S_DELPASS></td><td><input class="postinput" type="password" name="password" size="8" /> <small><const S_DELEXPL></small></td></tr>
 	<tr><td colspan="2">
 	<div class="rules">}.include("include/rules.html").q{</div></td></tr>
 	</tbody></table></form></div>
@@ -123,7 +103,6 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 </if>
 <form id="delform" action="<var $self>" method="post">
 <loop $threads>
-	<div class="thread">
 	<loop $posts>
 		<if !$parent>
 			<if $image>
@@ -168,53 +147,50 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 			</if>
 		</if>
 		<if $parent>
-			<div><div class="doubledash">&gt;&gt;</div>
-				<div class="reply" id="reply<var $num>">
-					<a name="<var $num>"></a>
-					<label>
-						<input type="checkbox" name="delete" value="<var $num>" />
-						<span class="replytitle"><var $subject></span>
-						<if $email><span class="commentpostername"><a href="<var $email>"><var $name></a></span><if $trip><span class="postertrip"><a href="<var $email>"><var $trip></a></span></if></if>
-						<if !$email><span class="commentpostername"><var $name></span><if $trip><span class="postertrip"><var $trip></span></if></if>
-						<var $date>
-					</label>
-					<span class="reflink">
-					<if !$thread><a href="<var get_reply_link($parent,0)>#i<var $num>">No.<var $num></a></if>
-					<if $thread><a href="javascript:insert('&gt;&gt;<var $num>')">No.<var $num></a></if>
-					</span>&nbsp;
-				<if $image>
-					<br />
-					<span class="filesize"><const S_PICNAME><a target="_blank" href="<var expand_image_filename($image)>"><var get_filename($image)></a> - (<var $size> B, <var $width>x<var $height>)</span>
-					<span class="thumbnailmsg"><const S_THUMB></span><br />
-					<if $thumbnail>
-						<a target="_blank" href="<var expand_image_filename($image)>">
-						<img src="<var expand_filename($thumbnail)>" width="<var $tn_width>" height="<var $tn_height>" alt="<var $size>" class="thumb" /></a>
+			<table><tbody><tr><td class="doubledash">&gt;&gt;</td>
+			<td class="reply" id="reply<var $num>">
+			<a name="<var $num>"></a>
+			<label><input type="checkbox" name="delete" value="<var $num>" />
+			<span class="replytitle"><var $subject></span>
+			<if $email><span class="commentpostername"><a href="<var $email>"><var $name></a></span><if $trip><span class="postertrip"><a href="<var $email>"><var $trip></a></span></if></if>
+			<if !$email><span class="commentpostername"><var $name></span><if $trip><span class="postertrip"><var $trip></span></if></if>
+			<var $date></label>
+			<span class="reflink">
+			<if !$thread><a href="<var get_reply_link($parent,0)>#i<var $num>">No.<var $num></a></if>
+			<if $thread><a href="javascript:insert('&gt;&gt;<var $num>')">No.<var $num></a></if>
+			</span>&nbsp;
+			<if $image>
+				<br />
+				<span class="filesize"><const S_PICNAME><a target="_blank" href="<var expand_image_filename($image)>"><var get_filename($image)></a>
+				- (<var $size> B, <var $width>x<var $height>)</span>
+				<span class="thumbnailmsg"><const S_THUMB></span><br />
+				<if $thumbnail>
+					<a target="_blank" href="<var expand_image_filename($image)>">
+					<img src="<var expand_filename($thumbnail)>" width="<var $tn_width>" height="<var $tn_height>" alt="<var $size>" class="thumb" /></a>
+				</if>
+				<if !$thumbnail>
+					<if DELETED_THUMBNAIL>
+						<a target="_blank" href="<var expand_image_filename(DELETED_IMAGE)>">
+						<img src="<var expand_filename(DELETED_THUMBNAIL)>" width="<var $tn_width>" height="<var $tn_height>" alt="" class="thumb" /></a>
 					</if>
-					<if !$thumbnail>
-						<if DELETED_THUMBNAIL>
-							<a target="_blank" href="<var expand_image_filename(DELETED_IMAGE)>">
-							<img src="<var expand_filename(DELETED_THUMBNAIL)>" width="<var $tn_width>" height="<var $tn_height>" alt="" class="thumb" /></a>
-						</if>
-						<if !DELETED_THUMBNAIL>
-							<div class="nothumb"><a target="_blank" href="<var expand_image_filename($image)>"><const S_NOTHUMB></a></div>
-						</if>
+					<if !DELETED_THUMBNAIL>
+						<div class="nothumb"><a target="_blank" href="<var expand_image_filename($image)>"><const S_NOTHUMB></a></div>
 					</if>
 				</if>
-				<blockquote>
-				<var $comment>
-				<if $abbrev><div class="abbrev"><var sprintf(S_ABBRTEXT,get_reply_link($num,$parent))></div></if>
-				</blockquote>
-				</div>
-			</div>
+			</if>
+			<blockquote>
+			<var $comment>
+			<if $abbrev><div class="abbrev"><var sprintf(S_ABBRTEXT,get_reply_link($num,$parent))></div></if>
+			</blockquote>
+			</td></tr></tbody></table>
 		</if>
 	</loop><div style="clear:left;"></div>
-	</div>
 	<hr />
 </loop>
 <table class="userdelete"><tbody><tr><td>
 <input type="hidden" name="task" value="delete" />
 <const S_REPDEL>[<label><input type="checkbox" name="fileonly" value="on" /><const S_DELPICONLY></label>]<br />
-<const S_DELKEY><input class="postinput" type="password" name="password" size="8" />
+<const S_DELKEY><input class="postinput" size="8" type="password" name="password" size="8" />
 <input value="<const S_DELETE>" type="submit" /></td></tr></tbody></table>
 </form>
 <script type="text/javascript">set_delpass("delform")</script>
@@ -439,8 +415,8 @@ use constant PROXY_PANEL_TEMPLATE => compile_template(MANAGER_HEAD_INCLUDE.q{
 <input type="hidden" name="type" value="white" />
 <input type="hidden" name="admin" value="<var $admin>" />
 <table><tbody>
-<tr><td class="postblock"><const S_PROXYIPLABEL></td><td><input type="text" name="ip" size="24" /></td></tr>
-<tr><td class="postblock"><const S_PROXYTIMELABEL></td><td><input type="text" name="timestamp" size="24" />
+<tr><td class="postblock"><const S_PROXYIPLABEL></td><td><input class="postinput" type="text" name="ip" size="24" /></td></tr>
+<tr><td class="postblock"><const S_PROXYTIMELABEL></td><td><input class="postinput" type="text" name="timestamp" size="24" />
 <input type="submit" value="<const S_PROXYWHITELIST>" /></td></tr>
 </tbody></table></form>
 </td></tr></tbody></table>

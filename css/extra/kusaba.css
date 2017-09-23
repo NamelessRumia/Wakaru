@@ -18,14 +18,9 @@ a:hover {
 .logo {
 	clear: both;
 	text-align: center;
-	color: #117743;
-}
-.logoTitle {
 	font-size: 2em;
+	color: #117743;
 	width: 100%;
-}
-.logoSubtitle {
-	font-size: small;
 }
 .theader {
 	background: #DAF0D6;
@@ -113,8 +108,9 @@ a:hover {
 	color: #000000;
 }
 .doubledash {
-	margin-left: 2px;
-	margin-right: 3px;
+	vertical-align: top;
+	clear: both;
+	float: left;
 }
 .thumbnailmsg {
 	font-size: small;

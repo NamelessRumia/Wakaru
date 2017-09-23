@@ -30,16 +30,11 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
-	color: #800000;\
-}
-.logoTitle {
 	font-family: Tahoma, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
+	color: #800000;
 	letter-spacing: -2px;
-}
-.logoSubtitle {
-	font-size: 10px;
 }
 .theader {
 	background: #E04000;
@@ -58,7 +53,7 @@ hr {
 .postblock {
 	background: #EEAA88;
 	border: 1px solid #800000;
-	padding: 3.5px 5px;
+	padding: 3px 5px;
 	font-weight: bold;
 }
 .postinput {
@@ -67,7 +62,7 @@ hr {
 	border: 1px solid #AAA;
 	outline: none;
 }
-.postinput:hover {
+.postinput:focus {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #EA8EA8;
@@ -78,7 +73,7 @@ hr {
 	text-align: center;
 }
 .passvalid {
-	background: #E08000;
+	background: #EEAA88;
 	color: #FFFFFF;
 	font-weight: bold;
 	text-align: center;
@@ -92,8 +87,8 @@ hr {
 	padding-bottom: 4px;
 }
 .managehead {
-	background: #6080F6;
-	/* color: #000000; */
+	background: #AAAA66;
+	color: #000000;
 	font-size: 14px;
 	padding: 0px;
 }
@@ -103,10 +98,10 @@ hr {
 	padding: 0px;
 }
 .row1 {
-	background: #D0D0F0;
+	background: #EEEECC;
 }
 .row2 {
-	background: #F6F6F6;
+	background: #DDDDAA;
 }
 .unkfunc {
 	background: inherit;
@@ -142,6 +137,9 @@ hr {
 }
 .doubledash {
 	color: #E0BFB7;
+ 	vertical-align: top;
+	clear: both;
+	float: left;
 }
 .thumbnailmsg {
 	font-size: 10px;

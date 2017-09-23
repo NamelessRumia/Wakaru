@@ -30,15 +30,10 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
-}
-.logoTitle {
 	font-family: Tahoma, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
 	letter-spacing: -2px;
-}
-.logoSubtitle {
-	font-size: 10px;
 }
 .theader {
 	background: #111111;
@@ -57,7 +52,7 @@ hr {
 .postblock {
 	background: #282A2E;
 	border: 1px solid #111111;
-	padding: 3.5px 5px;
+	padding: 3px 5px;
 	font-weight: bold;
 }
 .postinput {
@@ -140,6 +135,9 @@ hr {
 }
 .doubledash {
 	color: #C5C8C6;
+ 	vertical-align: top;
+	clear: both;
+	float: left;
 }
 .thumbnailmsg {
 	font-size: 10px;

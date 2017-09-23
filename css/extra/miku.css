@@ -30,16 +30,11 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
-	color: #800000;
-}
-.logoTitle {
 	font-family: Tahoma, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
+	color: #800000;
 	letter-spacing: -2px;
-}
-.logoSubtitle {
-	font-size: 10px;
 }
 .theader {
 	background: #E04000;
@@ -58,7 +53,7 @@ hr {
 .postblock {
 	background: #95D2D3;
 	border: 1px solid #000000;
-	padding: 3.5px 5px;
+	padding: 3px 5px;
 	font-weight: bold;
 }
 .postinput {
@@ -67,7 +62,7 @@ hr {
 	border: 1px solid #AAA;
 	outline: none;
 }
-.postinput:hover {
+.postinput:focus {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #0093AB;
@@ -140,6 +135,9 @@ hr {
 	padding: 2px;
 }
 .doubledash {
+ 	vertical-align: top;
+	clear: both;
+	float: left;
 }
 .thumbnailmsg {
 	font-size: 10px;

@@ -30,14 +30,9 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
-	color: #FF6600;
-}
-.logoTitle {
 	font-size: 32px;
 	font-weight: bold;
-}
-.logoSubtitle {
-	font-size: 11px;
+	color: #FF6600;
 }
 .theader, .passvalid {
 	background: #DDDDDD;
@@ -55,7 +50,7 @@ hr {
 	/* background: #DDDDDD; */
 	/* border: 1px solid #CCCCCC; */
 	color: #002244;
-	padding: 3.5px 5px;
+	padding: 3px 5px;
 	font-weight: bold;
 }
 .postinput {
@@ -63,7 +58,7 @@ hr {
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #AAA;
 }
-.postinput:hover {
+.postinput:focus {
 	margin: 0px;
 	padding: 2px 4px 3px 4px;
 	border: 1px solid #EEAA88;

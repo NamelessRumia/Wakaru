@@ -31,17 +31,11 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
-	color: #32DD72;
-}
-.logoTitle {
 	font-family: Arial, Helvetica, Tahoma, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
+	color: #32DD72;
 	letter-spacing: -2px;
-}
-.logoSubtitle {
-	color: #AF0A0F;
-	font-size: 11px;
 }
 .theader {
 	background: #32DD72;
@@ -57,22 +51,18 @@ hr {
 .postblock {
 	background: #333333;
 	color: #AAAAAA;
-	padding: 3.5px 5px;
+	padding: 3px 5px;
 	font-weight: bold;
 }
 .postinput {
 	background: #333333;
+	border: #888888 1px solid;
 	color: #CCCCCC;
-	border: 1px solid #666666;
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	outline: none;
 }
 .postinput:hover {
-	margin: 0px;
-	padding: 2px 4px 3px 4px;
-	border: 1px solid #AAAAAA;
-	outline: none;
+	background: #555555;
+	border: #888888 1px solid;
+	color: #32DD72;
 }
 .footer {
 	font-size: 12px;
@@ -145,6 +135,9 @@ hr {
 	padding: 2px;
 }
 .doubledash {
+	vertical-align: top;
+	clear: both;
+	float: left;
 }
 .thumbnailmsg {
 	font-size: 10px;
@@ -153,6 +146,20 @@ hr {
 	background-color: #555555;
 	border: 1px solid #555555;
 	padding: 2px;
+}
+input[type="text"], input[type="password"], textarea {
+	background: #333333;
+	color: #CCCCCC;
+	border: 1px solid #666666;
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	outline: none;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+	margin: 0px;
+	padding: 2px 4px 3px 4px;
+	border: 1px solid #AAAAAA;
+	outline: none;
 }
 table[border="1"] {
 	background-color: #333333;
@@ -172,16 +179,6 @@ table[border="1"] td {
 	text-decoration: underline overline;
 }
 blockquote a:hover {
-	color: #32DD72;
-}
-input[type="submit"], input[type="reset"] {
-	background: #333333;
-	border: #888888 1px solid;
-	color: #CCCCCC;
-}
-input[type="submit"]:hover, input[type="reset"]:hover {
-	background: #555555;
-	border: #888888 1px solid;
 	color: #32DD72;
 }
 .nothumb a {

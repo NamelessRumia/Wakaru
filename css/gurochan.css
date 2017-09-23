@@ -30,15 +30,10 @@ hr {
 .logo {
 	clear: both;
 	text-align: center;
-	color: #AF0A0F;
-}
-.logoTitle {
 	font-family: Tahoma, sans-serif;
 	font-size: 28px;
 	font-weight: bold;
-}
-.logoSubtitle {
-	font-size: 10px;
+	color: #AF0A0F;
 }
 .theader {
 	background: #CA927B;
@@ -56,7 +51,7 @@ hr {
 	padding: 0 5px;
 	font-weight: bold;
 }
-.postinput, input[type="file"] {
+.postinput {
 	background-color: #E6CBC0;
 	border-width: 1px;
 	border-style: solid none none solid;
@@ -130,6 +125,9 @@ hr {
 }
 .doubledash {
  	/* display: none; */
+ 	vertical-align: top;
+	clear: both;
+	float: left;
 }
 .thumbnailmsg {
 	font-size: 10px;
