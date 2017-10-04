@@ -16,8 +16,8 @@ a:hover {
 .logo {
 	clear: both;
 	text-align: center;
-	font: bold 2em Verdana,Tahoma,sans-serif;
-	color: #002200;
+	font-size: 2em;
+	color: #000000;
 	width: 100%;
 }
 .logo img, .logo br { /* uncomment this to make the title image disappear */
@@ -39,12 +39,9 @@ a:hover {
 	color: #000000;
 	font-weight: bold;
 }
-.postinput {
-}
 .footer {
 	text-align: center;
 	font-size: 12px;
-	font-family: serif;
 }
 .passvalid {
 	background: #6A836F;
