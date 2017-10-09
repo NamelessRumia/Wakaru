@@ -543,7 +543,7 @@ sub post_stuff($$$$$$$$$$$$$$)
 
 	# Manager and deletion stuff - duuuuuh?
 
-	# generate date
+	# generate date - to shift time, use ($time+3*3600,DATE_STYLE); and substitute +3 with no. of hours you wish to move
 	my $date=make_date($time,DATE_STYLE);
 
 	# generate ID code if enabled
