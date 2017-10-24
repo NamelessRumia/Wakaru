@@ -9,6 +9,13 @@ a {
 a:hover {
 	color: #3355EE;
 }
+hr {
+	border: none;
+	border-top: 1px solid #B7C5D9;
+}
+.thread hr {
+	border-color: #D9BFB7;
+}
 .adminbar {
 	text-align: right;
 	clear: both;
@@ -36,8 +43,6 @@ a:hover {
 	background: #A8B8F0;
 	color: #000000;
 	font-weight: bold;
-}
-.postinput {
 }
 .footer {
 	text-align: center;
@@ -83,7 +88,7 @@ a:hover {
 .filetitle, .replytitle {
 	background: inherit;
 	font-size: 1.2em;
-	color: #1010E0;
+	color: #3F31C0;
 	font-weight: bold;
 }
 .postername, .commentpostername {
@@ -93,7 +98,12 @@ a:hover {
 .postertrip {
 	color: #4060b0;
 }
-.postername a, .commentpostername a, .postertrip a {
+.postername a, .commentpostername a {
+	border-bottom: 1px dashed #6080e0;
+	text-decoration: none;
+}
+.postertrip a {
+	color: #4060b0;
 	border-bottom: 1px dashed #6080e0;
 	text-decoration: none;
 }
@@ -106,6 +116,8 @@ a:hover {
 }
 .reply {
 	background: #D6DAF0;
+	border: 1px solid #B7C5D9;
+	border-top: none; border-left: none;
 	color: #000000;
 }
 .doubledash {
@@ -118,9 +130,25 @@ a:hover {
 	color: #000000;
 }
 .highlight {
-	background: #D6DAF0;
-	border: 2px dashed #9988EE;
+	background: #EDEDF9;
+	border: 1px solid #CFDAE8;
+	border-top: none; border-left: none;
+	color: #000000;
 }
 textarea[name="field4"] {
 	width: 380px;
+}
+table[border="1"] {
+	background: #D6DAF0;
+	border: solid #B7C5D9;
+	border-width: 0 1px 1px 0;
+	color: #8899AA;
+	padding: 0 6px;
+}
+table[border="1"] a {
+	text-decoration: none;
+}
+table[border="1"] td {
+	border: none;
+	padding: 2px;
 }
