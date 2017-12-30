@@ -256,13 +256,13 @@ sub do_spans($@)
 		# do <s>
 		# $line=~s{ (?<![0-9a-zA-Z\*_\x80-\x9f\xe0-\xfc]) (~~) (?![<>\s\*_]) ([^<>]+?) (?<![<>\s\*_\x80-\x9f\xe0-\xfc]) \1 (?![0-9a-zA-Z\*_]) }{<u>$2</u>}gx;
 
-		# do ^H - [disabled due to an exploit; uncomment <s> instead]
-		# if($]>5.007)
-		# {
-		# 	my $regexp;
-		# 	$regexp=qr/(?:&#?[0-9a-zA-Z]+;|[^&<>])(?<!\^H)(??{$regexp})?\^H/;
-		# 	$line=~s{($regexp)}{"<del>".(substr $1,0,(length $1)/3)."</del>"}gex;
-		# }
+		# do ^H
+		if($]>5.007)
+		{
+			my $regexp;
+			$regexp=qr/(?:&#?[0-9a-zA-Z]+;|[^&<>])(?<!\^H)(??{$regexp})?\^H/;
+			$line=~s{($regexp)}{"<del>".(substr $1,0,(length $1)/3)."</del>"}gex;
+		}
 		
 		$line=$handler->($line) if($handler);
 
