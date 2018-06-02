@@ -29,7 +29,7 @@ form .trap { display:none }
 .spoiler:hover { color: #FFFFFF; }
 .theader, .passvalid { margin: 2px 0 0 0; padding: 2px; }
 .logo { padding-top: 6px; }
-/* .reply a img { max-height: 125px; max-width: 125px; height: auto; width: auto; } */
+/* .reply a img { max-height: 125px; max-width: 125px; height: auto; width: auto; } /* lazy 4chan thumbnailing, does not work with wakaba extension */
 </style>
 <loop $stylesheets>
 <link rel="<if !$default>alternate </if>stylesheet" type="text/css" href="<var $path><var $filename>" title="<var $title>" />
