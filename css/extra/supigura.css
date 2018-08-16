@@ -116,10 +116,3 @@ a:hover {
 }
 textarea[name="field4"] {
 }
-.spoiler {
-	background: #F0D0B6;
-	color: #F0D0B6;
-}
-.spoiler:hover {
-	color: #800000;
-}
