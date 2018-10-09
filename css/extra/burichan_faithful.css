@@ -1,0 +1,129 @@
+html {
+	background: #EEF2FF;
+	color: #000000;
+	font-family: Mona, IPAMonaPGothic, 'MS PGothic AA', 'MS PGothic', sans-serif;
+}
+a {
+	color: #34345C;
+}
+a:hover {
+	color: #DD0000;
+}
+.adminbar {
+	text-align: right;
+	clear: both;
+	float: right;
+}
+.logo {
+	clear: both;
+	text-align: center;
+	font-size: 160%;
+	font-weight: bold;
+	color: #AF0A0F;
+	width: 100%;
+}
+.theader {
+	background: #0010E0;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 0px;
+}
+.postarea {
+}
+.rules {
+	font-size: small;
+}
+.postblock {
+	background: #9988EE;
+	color: #000000;
+	font-weight: bold;
+}
+.footer {
+	text-align: center;
+	font-size: 12px;
+}
+.passvalid {
+	background: #9988EE;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 0px;
+}
+.dellist {
+	font-weight: bold;
+	text-align: center;
+}
+.delbuttons {
+	text-align: center;
+	padding-bottom: 4px;
+}
+.managehead {
+	background: #0F8FE1;
+	color: #400000;
+	padding: 0px;
+}
+.postlists {
+	background: #FFFFFF;
+	width: 100%;
+	padding: 0px;
+}
+.row1 {
+	background: #9AD2F6;
+}
+.row2 {
+	background: #FFFFFF;
+}
+.unkfunc {
+	background: inherit;
+	color: #789922;
+}
+.filesize {
+	text-decoration: none;
+}
+.filetitle, .replytitle {
+	background: inherit;
+	font-size: 1.2em;
+	color: #0F0C5D;
+	font-weight: bold;
+}
+.postername, .commentpostername {
+	color: #117743;
+	font-weight: bold;
+}
+.postertrip {
+	color: #117743;
+}
+.oldpost {
+	color: #CC1105;
+	font-weight: bold;
+}
+.omittedposts, .abbrev {
+	color: #707070;
+}
+.reply {
+	background: #D6DAF0;
+	color: #000000;
+}
+.doubledash {
+	vertical-align: top;
+	clear: both;
+	float: left;
+}
+.thumbnailmsg {
+	font-size: small;
+	color: #000000;
+}
+.highlight {
+	background: #D6DAF0;
+	border: 2px dashed #9988EE;
+}
+textarea[name="field4"] {
+}
+.spoiler {
+	background: #C4C2EE;
+	color: #C4C2EE;
+}
+.spoiler:hover {
+	color: #000000;
+}
