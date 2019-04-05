@@ -159,9 +159,14 @@ input[type="submit"], input[type="reset"] {
 	color: #800000;
 }
 .spoiler {
-	background: #900000;
-	color: #900000;
+	background: transparent;
+	color: transparent !important;
+	text-shadow: 0 0 5px rgba(0,0,0,0.4);
+	transition: 1s;
 }
 .spoiler:hover {
-	color: #FFFFFF;
+	background: transparent !important;
+	color: var(--a1-color) !important;
+	text-shadow: none;
+	transition: 1s;
 }
